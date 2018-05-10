@@ -25,11 +25,11 @@
   <div id="search_filters">
 
     {block name='facets_title'}
-      <h4 class="text-uppercase h6 hidden-sm-down">{l s='Filter By' d='Shop.Theme.Actions'}</h4>
+      <h4 class="text-uppercase h6 d-none d-md-block">{l s='Filter By' d='Shop.Theme.Actions'}</h4>
     {/block}
 
     {block name='facets_clearall_button'}
-      <div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper">
+      <div id="_desktop_search_filters_clear_all" class="d-none d-md-block clear-all-wrapper">
         <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
           <i class="material-icons">&#xE14C;</i>
           {l s='Clear all' d='Shop.Theme.Actions'}
@@ -40,7 +40,7 @@
     {foreach from=$facets item="facet"}
       {if $facet.displayed}
         <section class="facet clearfix">
-          <h1 class="h6 facet-title hidden-sm-down">{$facet.label}</h1>
+          <h1 class="h6 facet-title d-none d-md-block">{$facet.label}</h1>
           {assign var=_expand_id value=10|mt_rand:100000}
           {assign var=_collapse value=true}
           {foreach from=$facet.filters item="filter"}

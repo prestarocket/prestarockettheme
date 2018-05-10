@@ -24,7 +24,7 @@
  *}
 
 <div class="block-contact col-md-4 links wrapper">
-  <div class="hidden-sm-down">
+  <div class="d-none d-md-block">
     <h4 class="text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</h4>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}

@@ -27,12 +27,12 @@
     <nav class="header-nav">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 hidden-sm-down" id="_desktop_logo">
+          <div class="col-md-6 d-none d-md-block" id="_desktop_logo">
             <a href="{$urls.base_url}">
               <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
             </a>
           </div>
-          <div class="col-md-6 text-xs-right hidden-sm-down">
+          <div class="col-md-6 text-xs-right d-none d-md-block">
             {hook h='displayNav1'}
           </div>
           <div class="hidden-md-up text-sm-center mobile">

@@ -25,7 +25,7 @@
 {block name='order_products_table'}
   <form id="order-return-form" action="{$urls.pages.order_follow}" method="post">
 
-    <div class="box hidden-sm-down">
+    <div class="box d-none d-md-block">
       <table id="order-products" class="table table-bordered return">
         <thead class="thead-default">
           <tr>

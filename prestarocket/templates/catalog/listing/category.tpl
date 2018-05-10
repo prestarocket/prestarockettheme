@@ -25,7 +25,7 @@
 {extends file='catalog/listing/product-list.tpl'}
 
 {block name='product_list_header'}
-    <div class="block-category card card-block hidden-sm-down">
+    <div class="block-category card card-block d-none d-md-block">
       <h1 class="h1">{$category.name}</h1>
       {if $category.description}
         <div id="category-description" class="text-muted">{$category.description nofilter}</div>

@@ -24,7 +24,7 @@
  *}
 
 <div id="block_myaccount_infos" class="col-md-2 links wrapper">
-  <h3 class="myaccount-title hidden-sm-down">
+  <h3 class="myaccount-title d-none d-md-block">
     <a class="text-uppercase" href="{$urls.pages.my_account}" rel="nofollow">
       {l s='Your account' d='Shop.Theme.Customeraccount'}
     </a>

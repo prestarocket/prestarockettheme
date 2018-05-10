@@ -26,7 +26,7 @@
   <div class="user-info">
     {if $logged}
       <a
-        class="logout hidden-sm-down"
+        class="logout d-none d-md-block"
         href="{$logout_url}"
         rel="nofollow"
       >
