@@ -53,6 +53,8 @@ global_settings:
   modules:
    to_enable:
      - ps_linklist
+   to_disable:
+     - ps_searchbar
   hooks:
     modules_to_hook:
       displayNav1:
@@ -64,7 +66,7 @@ global_settings:
         - ps_shoppingcart
       displayTop:
         - ps_mainmenu
-        - ps_searchbar
+        - ps_searchbarjqauto
       displayHome:
         - ps_imageslider
         - ps_featuredproducts
@@ -81,7 +83,7 @@ global_settings:
         - ps_categorytree
         - ps_facetedsearch
       displaySearch:
-        - ps_searchbar
+        - ps_searchbarjqauto
       displayProductAdditionalInfo:
         - ps_sharebuttons
       displayReassurance:
@@ -129,3 +131,7 @@ theme_settings:
     new-products: layout-left-column
     prices-drop: layout-left-column
     contact: layout-left-column
+
+dependencies:
+  modules:
+    - ps_searchbarjqauto
