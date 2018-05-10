@@ -38,7 +38,7 @@
       {/block}
 
       {if !empty($listing.rendered_facets)}
-        <div class="col-sm-3 col-4 hidden-md-up filter-button">
+        <div class="col-sm-3 col-4 d-md-none filter-button">
           <button id="search_filter_toggler" class="btn btn-secondary">
             {l s='Filter' d='Shop.Theme.Actions'}
           </button>
@@ -46,7 +46,7 @@
       {/if}
     </div>
   </div>
-  <div class="col-sm-12 hidden-md-up text-sm-center showing">
+  <div class="col-sm-12 d-md-none text-sm-center showing">
     {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
     '%from%' => $listing.pagination.items_shown_from ,
     '%to%' => $listing.pagination.items_shown_to,

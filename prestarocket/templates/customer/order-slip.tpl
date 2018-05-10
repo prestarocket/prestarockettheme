@@ -53,7 +53,7 @@
         {/foreach}
       </tbody>
     </table>
-    <div class="credit-slips hidden-md-up">
+    <div class="credit-slips d-md-none">
       {foreach from=$credit_slips item=slip}
         <div class="credit-slip">
           <ul>

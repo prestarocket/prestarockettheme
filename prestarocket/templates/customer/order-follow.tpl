@@ -62,7 +62,7 @@
         {/foreach}
       </tbody>
     </table>
-    <div class="order-returns hidden-md-up">
+    <div class="order-returns d-md-none">
       {foreach from=$ordersReturn item=return}
         <div class="order-return">
           <ul>

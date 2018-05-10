@@ -39,7 +39,7 @@
         title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
+        <i class="material-icons d-md-none logged">&#xE7FF;</i>
         <span class="d-none d-md-inline">{$customerName}</span>
       </a>
     {else}

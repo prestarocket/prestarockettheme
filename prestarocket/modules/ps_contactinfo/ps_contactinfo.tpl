@@ -66,7 +66,7 @@
         }
       {/if}
   </div>
-  <div class="hidden-md-up">
+  <div class="d-md-none">
     <div class="title">
       <a class="h3" href="{$urls.pages.stores}">{l s='Store information' d='Shop.Theme.Global'}</a>
     </div>

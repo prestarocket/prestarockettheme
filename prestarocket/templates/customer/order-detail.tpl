@@ -180,7 +180,7 @@
             {/foreach}
           </tbody>
         </table>
-        <div class="hidden-md-up shipping-lines">
+        <div class="d-md-none shipping-lines">
           {foreach from=$order.shipping item=line}
             <div class="shipping-line">
               <ul>

@@ -113,7 +113,7 @@
   <!--  product left body: description -->
   <div class="product-line-grid-right product-line-actions col-md-5 col-12">
     <div class="row">
-      <div class="col-4 hidden-md-up"></div>
+      <div class="col-4 d-md-none"></div>
       <div class="col-md-10 col-6">
         <div class="row">
           <div class="col-md-6 col-6 qty">

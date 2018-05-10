@@ -35,7 +35,7 @@
           <div class="col-md-6 text-xs-right d-none d-md-block">
             {hook h='displayNav1'}
           </div>
-          <div class="hidden-md-up text-sm-center mobile">
+          <div class="d-md-none text-sm-center mobile">
             {hook h='displayNav2'}
             <div class="float-left" id="menu-icon">
               <i class="material-icons">&#xE5D2;</i>
@@ -51,7 +51,7 @@
   {/block}
 
   {block name='header_top'}
-    <div class="header-top hidden-md-up">
+    <div class="header-top d-md-none">
       <div class="container">
          <div class="row">
           <div class="col-sm-12">
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
+        <div id="mobile_top_menu_wrapper" class="row d-md-none" style="display:none;">
           <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
           <div class="js-top-menu-bottom">
             <div id="_mobile_currency_selector"></div>
