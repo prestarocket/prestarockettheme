@@ -57,7 +57,7 @@
         <button class="form-control-submit btn btn-primary d-none d-sm-block" name="submit" type="submit">
           {l s='Send reset link' d='Shop.Theme.Actions'}
         </button>
-        <button class="form-control-submit btn btn-primary hidden-sm-up" name="submit" type="submit">
+        <button class="form-control-submit btn btn-primary d-sm-none" name="submit" type="submit">
           {l s='Send' d='Shop.Theme.Actions'}
         </button>
       </div>

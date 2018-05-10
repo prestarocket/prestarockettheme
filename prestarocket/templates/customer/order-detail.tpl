@@ -102,7 +102,7 @@
           {/foreach}
         </tbody>
       </table>
-      <div class="hidden-sm-up history-lines">
+      <div class="d-sm-none history-lines">
         {foreach from=$order.history item=state}
           <div class="history-line">
             <div class="date">{$state.history_date}</div>
