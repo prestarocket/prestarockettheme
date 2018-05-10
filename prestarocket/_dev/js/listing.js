@@ -24,9 +24,7 @@
  */
 import $ from 'jquery';
 import prestashop from 'prestashop';
-import 'velocity-animate';
 
-import ProductMinitature from './components/product-miniature';
 
 $(document).ready(() => {
   prestashop.on('clickQuickView', function (elm) {
@@ -49,29 +47,7 @@ $(document).ready(() => {
   });
 
   var productConfig = (qv) => {
-    const MAX_THUMBS = 4;
-    var $arrows = $('.js-arrows');
-    var $thumbnails = qv.find('.js-qv-product-images');
-    $('.js-thumb').on('click', (event) => {
-      if ($('.js-thumb').hasClass('selected')) {
-        $('.js-thumb').removeClass('selected');
-      }
-      $(event.currentTarget).addClass('selected');
-      $('.js-qv-product-cover').attr('src', $(event.target).data('image-large-src'));
-    });
-    if ($thumbnails.find('li').length <= MAX_THUMBS) {
-      $arrows.hide();
-    } else {
-      $arrows.on('click', (event) => {
-        if ($(event.target).hasClass('arrow-up') && $('.js-qv-product-images').position().top < 0) {
-          move('up');
-          $('.arrow-down').css('opacity', '1');
-        } else if ($(event.target).hasClass('arrow-down') && $thumbnails.position().top + $thumbnails.height() > $('.js-qv-mask').height()) {
-          move('down');
-          $('.arrow-up').css('opacity', '1');
-        }
-      });
-    }
+
     qv.find('#quantity_wanted').TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'material-icons touchspin-up',
@@ -82,21 +58,7 @@ $(document).ready(() => {
       max: 1000000
     });
   };
-  var move = (direction) => {
-    const THUMB_MARGIN = 20;
-    var $thumbnails = $('.js-qv-product-images');
-    var thumbHeight = $('.js-qv-product-images li img').height() + THUMB_MARGIN;
-    var currentPosition = $thumbnails.position().top;
-    $thumbnails.velocity({
-      translateY: (direction === 'up') ? currentPosition + thumbHeight : currentPosition - thumbHeight
-    }, function () {
-      if ($thumbnails.position().top >= 0) {
-        $('.arrow-up').css('opacity', '.2');
-      } else if ($thumbnails.position().top + $thumbnails.height() <= $('.js-qv-mask').height()) {
-        $('.arrow-down').css('opacity', '.2');
-      }
-    });
-  };
+
   $('body').on('click', '#search_filter_toggler', function () {
     $('#search_filters_wrapper').removeClass('hidden-sm-down');
     $('#content-wrapper').addClass('hidden-sm-down');
@@ -155,7 +117,6 @@ function updateProductListDOM (data) {
   $('#js-product-list').replaceWith(data.rendered_products);
   $('#js-product-list-bottom').replaceWith(data.rendered_products_bottom);
 
-  let productMinitature = new ProductMinitature();
-  productMinitature.init();
+
 
 }
