@@ -30,7 +30,7 @@
 
 {block name='page_content'}
   {if $cart_rules}
-    <table class="table table-striped table-bordered hidden-sm-down">
+    <table class="table table-striped d-none d-md-table">
       <thead class="thead-default">
         <tr>
           <th>{l s='Code' d='Shop.Theme.Checkout'}</th>
