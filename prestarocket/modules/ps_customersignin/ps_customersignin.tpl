@@ -40,7 +40,7 @@
         rel="nofollow"
       >
         <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
-        <span class="hidden-sm-down">{$customerName}</span>
+        <span class="d-none d-md-inline">{$customerName}</span>
       </a>
     {else}
       <a
@@ -49,7 +49,7 @@
         rel="nofollow"
       >
         <i class="material-icons">&#xE7FF;</i>
-        <span class="hidden-sm-down">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+        <span class="d-none d-md-inline">{l s='Sign in' d='Shop.Theme.Actions'}</span>
       </a>
     {/if}
   </div>
