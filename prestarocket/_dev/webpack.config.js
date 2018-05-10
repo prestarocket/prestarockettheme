@@ -82,13 +82,16 @@ let config = {
     jquery: 'jQuery'
   },
   plugins: [
-    new ExtractTextPlugin(path.join('..', 'css', 'theme.css'))
+    new ExtractTextPlugin(path.join('..', 'css', 'theme.css')),
+    new webpack.ProvidePlugin({
+        Popper: ['popper.js', 'default']
+    })
   ]
 };
 
 config.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
-    sourceMap: false,
+    sourceMap: true,
     compress: {
       sequences: true,
       conditionals: true,
