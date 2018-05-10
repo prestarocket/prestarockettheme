@@ -132,21 +132,21 @@
                 <div class="clearfix"></div>
               {/if}
             </td>
-            <td class="text-xs-right">{$product.qty_returned}</td>
-            <td class="text-xs-right">{$product.price}</td>
-            <td class="text-xs-right">{$product.total}</td>
+            <td class="text-right">{$product.qty_returned}</td>
+            <td class="text-right">{$product.price}</td>
+            <td class="text-right">{$product.total}</td>
           </tr>
         {/foreach}
         <tfoot>
           {foreach $order.subtotals as $line}
             {if $line.value}
-              <tr class="text-xs-right line-{$line.type}">
+              <tr class="text-right line-{$line.type}">
                 <td colspan="5">{$line.label}</td>
                 <td colspan="2">{$line.value}</td>
               </tr>
             {/if}
           {/foreach}
-          <tr class="text-xs-right line-{$order.totals.total.type}">
+          <tr class="text-right line-{$order.totals.total.type}">
             <td colspan="5">{$order.totals.total.label}</td>
             <td colspan="2">{$order.totals.total.value}</td>
           </tr>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="col-sm-7 qty">
                   <div class="row">
-                    <div class="col-4 text-sm-left text-xs-left">
+                    <div class="col-4 text-sm-left text-left">
                       {$product.price}
                     </div>
                     <div class="col-4">
@@ -205,7 +205,7 @@
                         <div>{l s='Returned' d='Shop.Theme.Customeraccount'}: {$product.qty_returned}</div>
                       {/if}
                     </div>
-                    <div class="col-4 text-xs-right">
+                    <div class="col-4 text-right">
                       {$product.total}
                     </div>
                   </div>
@@ -221,13 +221,13 @@
         {if $line.value}
           <div class="order-total row">
             <div class="col-8"><strong>{$line.label}</strong></div>
-            <div class="col-4 text-xs-right">{$line.value}</div>
+            <div class="col-4 text-right">{$line.value}</div>
           </div>
         {/if}
       {/foreach}
       <div class="order-total row">
         <div class="col-8"><strong>{$order.totals.total.label}</strong></div>
-        <div class="col-4 text-xs-right">{$order.totals.total.value}</div>
+        <div class="col-4 text-right">{$order.totals.total.value}</div>
       </div>
     </div>
 

@@ -85,9 +85,9 @@
           </div>
           <div class="col-sm-6 col-12 qty">
             <div class="row">
-              <div class="col-5 text-sm-right text-xs-left">{$product.price}</div>
+              <div class="col-5 text-sm-right text-left">{$product.price}</div>
               <div class="col-2">{$product.quantity}</div>
-              <div class="col-5 text-xs-right bold">{$product.total}</div>
+              <div class="col-5 text-right bold">{$product.total}</div>
             </div>
           </div>
         </div>
