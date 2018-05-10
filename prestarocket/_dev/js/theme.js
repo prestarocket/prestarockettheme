@@ -22,9 +22,18 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-import 'expose-loader?Tether!tether';
-import 'bootstrap/dist/js/bootstrap.min';
-import 'flexibility';
+import 'bootstrap/js/src/util';
+import 'bootstrap/js/src/alert';
+import 'bootstrap/js/src/button';
+// import 'bootstrap/js/src/carousel';
+import 'bootstrap/js/src/collapse';
+import 'bootstrap/js/src/dropdown';
+import 'bootstrap/js/src/modal';
+import 'bootstrap/js/src/popover';
+import 'bootstrap/js/src/scrollspy';
+import 'bootstrap/js/src/tab';
+import 'bootstrap/js/src/tooltip';
+// import 'flexibility';
 import 'bootstrap-touchspin';
 
 import './responsive';
