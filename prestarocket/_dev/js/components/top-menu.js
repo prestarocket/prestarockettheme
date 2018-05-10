@@ -23,9 +23,8 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
 import $ from 'jquery';
-import DropDown from './drop-down';
 
-export default class TopMenu extends DropDown {
+export default class TopMenu {
   init() {
     let elmId;
     let self = this;

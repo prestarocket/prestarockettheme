@@ -43,10 +43,9 @@ import './listing';
 import './product';
 import './cart';
 
-import DropDown from './components/drop-down';
 import Form from './components/form';
 import ProductSelect from './components/product-select';
-import TopMenu from './components/top-menu';
+// import TopMenu from './components/top-menu';
 
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
@@ -60,14 +59,8 @@ for (var i in EventEmitter.prototype) {
 }
 
 $(document).ready(() => {
-  let dropDownEl = $('.js-dropdown');
   const form = new Form();
-  let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
-  let dropDown = new DropDown(dropDownEl);
-  let topMenu = new TopMenu(topMenuEl);
   let productSelect  = new ProductSelect();
-  dropDown.init();
   form.init();
-  topMenu.init();
   productSelect.init();
 });
