@@ -37,7 +37,19 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 @import "~bootstrap/scss/pagination";
 @import "~bootstrap/scss/badge";
 @import "~bootstrap/scss/jumbotron";
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
 @import "~bootstrap/scss/alert";
+$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+
 //@import "~bootstrap/scss/progress";
 @import "~bootstrap/scss/media";
 @import "~bootstrap/scss/list-group";
@@ -46,5 +58,21 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 @import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
+$theme-colors: (
+        "primary":    $primary,
+        "light":      $light,
+        "dark":       $dark
+);
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+

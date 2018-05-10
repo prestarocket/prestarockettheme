@@ -24,7 +24,7 @@
  *}
 {block name='header'}
   {block name='header_nav'}
-    <nav class="header-nav">
+    <nav class="header-nav border-bottom py-2">
       <div class="container">
         <div class="row">
           <div class="col-md-6 d-none d-md-block" id="_desktop_logo">
