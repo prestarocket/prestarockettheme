@@ -1,7 +1,7 @@
 {assign var=_counter value=0}
 {function name="menu" nodes=[] depth=0 parent=null}
     {if $nodes|count}
-      <ul class="top-menu" {if $depth == 0}id="top-menu"{/if} data-depth="{$depth}">
+      <ul {if $depth == 0}class="top-menu d-flex m-0"  id="top-menu"{else} class="top-menu"{/if} data-depth="{$depth}">
         {foreach from=$nodes item=node}
             <li class="{$node.type}{if $node.current} current {/if}" id="{$node.page_identifier}">
             {assign var=_counter value=$_counter+1}

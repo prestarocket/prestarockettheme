@@ -32,10 +32,10 @@
   <nav class="header-nav border-bottom">
     <div class="container">
       <div class="row d-none d-md-flex align-items-center">
-        <div class="col-md-5">
+        <div class="col-md-4">
             {hook h='displayNav1'}
         </div>
-        <div class="col-md-7 d-flex align-items-center justify-content-end right-nav">
+        <div class="col-md-8 d-flex align-items-center justify-content-end right-nav">
             {hook h='displayNav2'}
         </div>
       </div>
@@ -54,7 +54,7 @@
 {/block}
 
 {block name='header_top'}
-  <div class="header-top">
+  <div class="header-top py-3 border-bottom">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-2 d-none d-md-block" id="_desktop_logo">
