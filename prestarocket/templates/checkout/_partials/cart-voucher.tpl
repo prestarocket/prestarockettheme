@@ -33,7 +33,7 @@
                 <li class="cart-summary-line">
                   <span class="label">{$voucher.name}</span>
                   <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="material-icons">&#xE872;</i></a>
-                  <div class="float-xs-right">
+                  <div class="float-right">
                     {$voucher.reduction_formatted}
                   </div>
                 </li>

@@ -158,7 +158,7 @@
               data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
           >
             {if !isset($product.is_gift) || !$product.is_gift}
-            <i class="material-icons float-xs-left">delete</i>
+            <i class="material-icons float-left">delete</i>
             {/if}
           </a>
 
