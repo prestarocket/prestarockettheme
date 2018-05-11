@@ -59,7 +59,7 @@
           {if $facet.widgetType !== 'dropdown'}
 
             {block name='facet_item_other'}
-              <ul id="facet_{$_expand_id}" class="collapse{if !$_collapse} show{/if}">
+              <ul id="facet_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
                 {foreach from=$facet.filters key=filter_key item="filter"}
                   {if $filter.displayed}
                     <li>
@@ -113,7 +113,7 @@
           {else}
 
             {block name='facet_item_dropdown'}
-              <ul id="facet_{$_expand_id}" class="collapse{if !$_collapse} show{/if}">
+              <ul id="facet_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
                 <li>
                   <div class="col-sm-12 col-12 col-md-12 facet-dropdown dropdown">
                     <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

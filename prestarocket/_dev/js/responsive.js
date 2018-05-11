@@ -47,14 +47,19 @@ function toggleMobileStyles()
 				swapChildren($(el), target);
 			}
 		});
-	} else {
+        $('[data-collapse-hide-mobile]').collapse('hide');
+
+    } else {
 		$("*[id^='_mobile_']").each(function(idx, el) {
 			var target = $('#' + el.id.replace('_mobile_', '_desktop_'));
 			if (target.length) {
 				swapChildren($(el), target);
 			}
 		});
-	}
+        $('[data-collapse-hide-mobile]').not('.show').collapse('show');
+
+    }
+
 	prestashop.emit('responsive update', {
 		mobile: prestashop.responsive.mobile
 	});

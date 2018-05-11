@@ -38,7 +38,7 @@
       </span>
     </span>
   </div>
-  <ul class="account-list collapse" id="footer_account_list">
+  <ul class="account-list collapse show" data-collapse-hide-mobile id="footer_account_list">
     {foreach from=$my_account_urls item=my_account_url}
         <li>
           <a href="{$my_account_url.url}" title="{$my_account_url.title}" rel="nofollow">

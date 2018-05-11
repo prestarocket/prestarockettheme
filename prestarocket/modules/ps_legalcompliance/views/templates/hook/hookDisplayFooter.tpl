@@ -34,7 +34,7 @@
       </span>
     </span>
   </div>
-  <ul class="collapse" id="footer_eu_about_us_list">
+  <ul class="collapse show" data-collapse-hide-mobile id="footer_eu_about_us_list">
     {foreach from=$cms_links item=cms_link}
       <li>
         <a href="{$cms_link.link}" class="cms-page-link" title="{$cms_link.description|default:''}" id="{$cms_link.id}"> {$cms_link.title} </a>
