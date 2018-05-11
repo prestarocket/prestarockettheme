@@ -52,6 +52,8 @@ import EventEmitter from 'events';
 
 
 import './components/block-cart';
+import './lib/slick.min';
+import SlickSlider from './components/slick';
 
 // "inherit" EventEmitter
 for (var i in EventEmitter.prototype) {
@@ -61,6 +63,9 @@ for (var i in EventEmitter.prototype) {
 $(document).ready(() => {
   const form = new Form();
   let productSelect  = new ProductSelect();
+  let slickSlider = new SlickSlider();
   form.init();
   productSelect.init();
+  slickSlider.init();
+
 });

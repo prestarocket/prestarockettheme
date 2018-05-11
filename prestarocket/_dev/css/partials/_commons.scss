@@ -2,6 +2,16 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
+/* Slider rm blink effect */
+
+.ir {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
 //body,
 //html {
 //  height: 100%;
