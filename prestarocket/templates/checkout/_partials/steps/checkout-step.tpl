@@ -30,17 +30,25 @@
                         '-reachable'      => $step_is_reachable,
                         '-complete'       => $step_is_complete,
                         'js-current-step' => $step_is_current
-                    ]|classnames}"
+                    ]|classnames} card"
   >
+    <div class="card-header" id="heading-{$identifier}">
     <h1 class="step-title h3">
       <i class="material-icons rtl-no-flip done">&#xE876;</i>
       <span class="step-number">{$position}</span>
       {$title}
-      <span class="step-edit text-muted"><i class="material-icons edit">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}</span>
-    </h1>
 
-    <div class="content">
-      {block name='step_content'}DUMMY STEP CONTENT{/block}
+      {if $step_is_reachable}
+      <button class="step-edit text-muted btn btn-sm btn-link" data-toggle="collapse" data-target="#content-{$identifier}" aria-expanded="{if $step_is_current}true{else}false{/if}" aria-controls="content-{$identifier}">
+        <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
+      </button>
+      {/if}
+    </h1>
+    </div>
+    <div id="content-{$identifier}" class="collapse{if $step_is_current} show{/if}" aria-labelledby="heading-{$identifier}" data-parent="#js-checkout-process">
+      <div class="content card-body">
+        {block name='step_content'}DUMMY STEP CONTENT{/block}
+      </div>
     </div>
   </section>
 {/block}

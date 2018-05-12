@@ -42,7 +42,7 @@
         {include file='catalog/_partials/product-activation.tpl'}
       {/block}
 
-      <header id="header">
+      <header id="header" class="l-header">
         {block name='header'}
           {include file='_partials/header.tpl'}
         {/block}
@@ -93,7 +93,7 @@
         {hook h="displayWrapperBottom"}
       </section>
 
-      <footer id="footer">
+      <footer id="footer" class="l-footer">
         {block name="footer"}
           {include file="_partials/footer.tpl"}
         {/block}

@@ -33,18 +33,19 @@
       <div class="cart-grid-body col-12 col-lg-8">
 
         <!-- cart products detailed -->
-        <div class="card cart-container">
-          <div class="card-block">
+        <div class="card cart-container shadow mb-3">
+          <div class="card-header">
             <h1 class="h1">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
           </div>
-          <hr class="separator">
+          <div class="card-body">
           {block name='cart_overview'}
             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
           {/block}
+          </div>
         </div>
 
         {block name='continue_shopping'}
-          <a class="label" href="{$urls.pages.index}">
+          <a class="label btn btn-outline-primary" href="{$urls.pages.index}">
             <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
           </a>
         {/block}
@@ -59,8 +60,8 @@
       <div class="cart-grid-right col-12 col-lg-4">
 
         {block name='cart_summary'}
-          <div class="card cart-summary">
-
+          <div class="card cart-summary shadow mb-5">
+            <div class="card-body">
             {block name='hook_shopping_cart'}
               {hook h='displayShoppingCart'}
             {/block}
@@ -68,10 +69,12 @@
             {block name='cart_totals'}
               {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
             {/block}
-
+            </div>
+            <div class="card-footer">
             {block name='cart_actions'}
               {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
             {/block}
+            </div>
 
           </div>
         {/block}

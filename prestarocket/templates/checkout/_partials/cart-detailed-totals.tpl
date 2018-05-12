@@ -36,10 +36,12 @@
               {$subtotal.label}
             {/if}
           </span>
+          <div>
           <span class="value">{$subtotal.value}</span>
           {if $subtotal.type === 'shipping'}
-              <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
+              <small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
           {/if}
+          </div>
         </div>
       {/if}
     {/foreach}
@@ -63,6 +65,5 @@
     </div>
   </div>
 
-  <hr class="separator">
 </div>
 {/block}

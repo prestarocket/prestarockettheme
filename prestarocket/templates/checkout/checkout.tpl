@@ -37,7 +37,7 @@
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
 
-    <header id="header">
+    <header id="header" class="l-header">
       {block name='header'}
         {include file='checkout/_partials/header.tpl'}
       {/block}
@@ -54,7 +54,7 @@
       {block name='content'}
         <section id="content">
           <div class="row">
-            <div class="col-md-8">
+            <div id="js-checkout-process" class="col-md-8">
               {block name='cart_summary'}
                 {render file='checkout/checkout-process.tpl' ui=$checkout_process}
               {/block}
@@ -74,7 +74,7 @@
       {hook h="displayWrapperBottom"}
     </section>
 
-    <footer id="footer">
+    <footer id="footer" class="l-footer">
       {block name='footer'}
         {include file='checkout/_partials/footer.tpl'}
       {/block}
