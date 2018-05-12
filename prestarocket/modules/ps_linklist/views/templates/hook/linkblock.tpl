@@ -22,20 +22,13 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="col-md-4 links">
-  <div class="row">
+
   {foreach $linkBlocks as $linkBlock}
-    <div class="col-md-6 wrapper">
-      <h3 class="h3 d-none d-md-block">{$linkBlock.title}</h3>
+    <div class="col-md-3">
       {assign var=_expand_id value=10|mt_rand:100000}
-      <div class="title clearfix d-md-none" data-target="#footer_sub_menu_{$_expand_id}" data-toggle="collapse">
+      <div class="title clearfix">
         <span class="h3">{$linkBlock.title}</span>
-        <span class="float-right">
-          <span class="navbar-toggler collapse-icons">
-            <i class="material-icons add">&#xE313;</i>
-            <i class="material-icons remove">&#xE316;</i>
-          </span>
-        </span>
+        <i class="material-icons icon-collapse float-right d-md-none" data-target="#footer_sub_menu_{$_expand_id}" data-toggle="collapse">&#xE313;</i>
       </div>
       <ul id="footer_sub_menu_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
         {foreach $linkBlock.links as $link}
@@ -54,5 +47,4 @@
       </ul>
     </div>
   {/foreach}
-  </div>
-</div>
+

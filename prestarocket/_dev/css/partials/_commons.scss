@@ -12,6 +12,16 @@ ul {
   overflow: hidden;
 }
 
+/* collapse icons */
+.icon-collapse{
+  transition: transform 0.4s ease;
+
+
+}
+.icon-collapse[aria-expanded=true]{
+  transform: rotateZ(180deg);
+}
+
 //body,
 //html {
 //  height: 100%;

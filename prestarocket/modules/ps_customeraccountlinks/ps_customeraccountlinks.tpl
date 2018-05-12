@@ -23,21 +23,17 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div id="block_myaccount_infos" class="col-md-2 links wrapper">
+<div id="block_myaccount_infos" class="col-md-3 links wrapper">
   <h3 class="myaccount-title d-none d-md-block">
     <a class="text-uppercase" href="{$urls.pages.my_account}" rel="nofollow">
       {l s='Your account' d='Shop.Theme.Customeraccount'}
     </a>
   </h3>
-  <div class="title clearfix d-md-none" data-target="#footer_account_list" data-toggle="collapse">
+  <div class="title clearfix d-md-none">
     <span class="h3">{l s='Your account' d='Shop.Theme.Customeraccount'}</span>
-    <span class="float-right">
-      <span class="navbar-toggler collapse-icons">
-        <i class="material-icons add">&#xE313;</i>
-        <i class="material-icons remove">&#xE316;</i>
-      </span>
-    </span>
+    <i class="material-icons icon-collapse float-right d-md-none" data-target="#footer_account_list" data-toggle="collapse">&#xE313;</i>
   </div>
+
   <ul class="account-list collapse show" data-collapse-hide-mobile id="footer_account_list">
     {foreach from=$my_account_urls item=my_account_url}
         <li>

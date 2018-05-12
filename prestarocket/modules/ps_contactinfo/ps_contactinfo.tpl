@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="block-contact col-md-4 links wrapper">
+<div class="block-contact col-md-3">
   <div class="d-none d-md-block">
     <h4 class="text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</h4>
       {$contact_infos.address.formatted nofilter}
