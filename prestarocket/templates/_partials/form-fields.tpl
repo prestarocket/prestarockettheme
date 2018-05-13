@@ -29,6 +29,7 @@
     {/block}
 
 {else}
+    {assign var=uniqId value=10|mt_rand:100000}
 
     <div class="form-group row {if !empty($field.errors)}has-error{/if}">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
@@ -38,7 +39,7 @@
                 {/if}
             </div>
         {else}
-            <label class="col-md-3 col-form-label{if $field.required} required{/if}" for="f-{$field.name}">
+            <label class="col-md-3 col-form-label{if $field.required} required{/if}" for="f-{$field.name}_{$uniqId}">
                 {$field.label}
             </label>
         {/if}
@@ -48,7 +49,7 @@
             {if $field.type === 'select'}
 
                 {block name='form_field_item_select'}
-                    <select class="custom-select" name="{$field.name}" id="f-{$field.name}"{if $field.required} required{/if}>
+                    <select class="custom-select" name="{$field.name}" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
                         <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
                         {foreach from=$field.availableValues item="label" key="value"}
                             <option value="{$value}" {if $value eq $field.value} selected {/if}>{$label}</option>
@@ -62,7 +63,7 @@
                     <select
                             class="custom-select js-country"
                             name="{$field.name}"
-                            id="f-{$field.name}"
+                            id="f-{$field.name}_{$uniqId}"
                             {if $field.required}required{/if}
                     >
                         <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
@@ -82,12 +83,12 @@
                                     type="radio"
                                     value="{$value}"
                                     class="custom-control-input"
-                                    id="f-{$field.name}-{$smarty.foreach.radiolist.iteration}"
+                                    id="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}"
                                     {if $field.required}required{/if}
                                     {if $value eq $field.value} checked {/if}
                             >
 
-                            <label class="custom-control-label" for="f-{$field.name}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
+                            <label class="custom-control-label" for="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
                         </div>
                     {/foreach}
 
@@ -97,15 +98,15 @@
 
                 {block name='form_field_item_checkbox'}
                     <div class="custom-control custom-checkbox">
-                        <input name="{$field.name}" type="checkbox" value="1" id="f-{$field.name}" class="custom-control-input"{if $field.value} checked="checked"{/if}{if $field.required} required{/if}>
-                        <label class="custom-control-label" for="f-{$field.name}">{$field.label nofilter}</label>
+                        <input name="{$field.name}" type="checkbox" value="1" id="f-{$field.name}_{$uniqId}" class="custom-control-input"{if $field.value} checked="checked"{/if}{if $field.required} required{/if}>
+                        <label class="custom-control-label" for="f-{$field.name}_{$uniqId}">{$field.label nofilter}</label>
                     </div>
                 {/block}
 
             {elseif $field.type === 'date'}
 
                 {block name='form_field_item_date'}
-                    <input name="{$field.name}" class="form-control" type="date" value="{$field.value}" placeholder="{if isset($field.availableValues.placeholder)}{$field.availableValues.placeholder}{/if}" id="f-{$field.name}">
+                    <input name="{$field.name}" class="form-control" type="date" value="{$field.value}" placeholder="{if isset($field.availableValues.placeholder)}{$field.availableValues.placeholder}{/if}" id="f-{$field.name}_{$uniqId}">
                     {if isset($field.availableValues.comment)}
                         <span class="form-text text-muted">
               {$field.availableValues.comment}
@@ -142,7 +143,7 @@
                         <input
                                 class="form-control js-child-focus js-visible-password"
                                 name="{$field.name}"
-                                id="f-{$field.name}"
+                                id="f-{$field.name}_{$uniqId}"
                                 type="password"
                                 value=""
                                 pattern=".{literal}{{/literal}5,{literal}}{/literal}"
@@ -164,8 +165,8 @@
 
             {elseif $field.type === 'file'}
                 <div class="custom-file">
-                    <input name="{$field.name}" type="file" class="custom-file-input" id="f-{$field.name}"{if $field.required} required{/if}>
-                    <label class="custom-file-label" for="f-{$field.name}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+                    <input name="{$field.name}" type="file" class="custom-file-input" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
+                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
                     {literal}
                     <style>
                         .custom-file-label::after{
@@ -182,7 +183,7 @@
                             name="{$field.name}"
                             type="{$field.type}"
                             value="{$field.value}"
-                            id="f-{$field.name}"
+                            id="f-{$field.name}_{$uniqId}"
                             {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
                             {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
                             {if $field.required}required{/if}
