@@ -17,6 +17,11 @@ ul {
   padding-left: 0;
 }
 
+.material-icons.small{
+  font-size: $font-size-base;
+
+}
+
 /* Slider rm blink effect */
 
 .ir {
@@ -54,9 +59,27 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+/* CHECKOUT STEP */
+.order-checkout .card-body{
+  padding-bottom: 0;
 
+}
 .step-edit[aria-expanded="true"]{
   display: none;
+}
+.step-title
+{
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.-complete .step-title .done {
+display: inline-block;
+}
+.-current .step-title .done {
+  visibility: hidden;
+}
+.-current .card-header{
+  background-color: $white;
 }
 //body,
 //html {
