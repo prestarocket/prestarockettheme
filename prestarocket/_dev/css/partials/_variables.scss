@@ -7,6 +7,30 @@ $body-bg:       #f1f1f1;
 $enable-rounded:            false;
 $enable-shadows:            true;
 
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+
+
+$h1-font-size:                $font-size-base * 1.375;
+$h2-font-size:                $font-size-base * 1.25;
+$h3-font-size:                $font-size-base * 1.125;
+$h4-font-size:                $font-size-base * 1.125;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-base * 0.9375;
+
+$display1-size: 3.125rem;
+$display1-weight: 600;
+$display2-size: 2.188rem;
+$display2-weight: 400;
+$display3-size: 1.563rem;
+$display3-weight: 400;
+$display4-size: 1.25rem;
+$display4-weight: 400;
+
+$small-font-size:             $font-size-base * 0.875;
 
 //$gray-darker: #232323;
 //$gray: #7A7A7A;
