@@ -1,11 +1,12 @@
 // main layout
-$header-bg:$white;
-$footer-bg:$white;
+$header-bg:     $white;
+$footer-bg:     $white;
+$wrapper-bg:    #f1f1f1;
 //product miniature
 
-$pm-title-color:$gray-700;
-$pm-title-font-size:$font-size-base;
-$pm-title-font-weight:400;
+$pm-title-color:      $gray-700;
+$pm-title-font-size:      $font-size-base;
+$pm-title-font-weight:      400;
 
 //cart
-$promo-code-bg:darken($body-bg,10%);
+$promo-code-bg:       darken($body-bg,10%);

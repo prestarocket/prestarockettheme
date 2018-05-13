@@ -107,7 +107,7 @@
 
           </div>
         </div>
-        <button type="submit" class="continue btn btn-primary float-right" name="confirmDeliveryOption" value="1">
+        <button type="submit" class="continue btn btn-primary btn-lg" name="confirmDeliveryOption" value="1">
           {l s='Continue' d='Shop.Theme.Actions'}
         </button>
       </form>

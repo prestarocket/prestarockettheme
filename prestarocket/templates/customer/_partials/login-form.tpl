@@ -38,11 +38,17 @@
           {/block}
         {/foreach}
       {/block}
-      <div class="forgot-password">
-        <a href="{$urls.pages.password}" rel="nofollow">
-          {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
-        </a>
+      <div class="form-group row form-group_forgot-password">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <div class="forgot-password text-right">
+          <a href="{$urls.pages.password}" rel="nofollow" class="small">
+              {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+          </a>
+        </div>
+        </div>
       </div>
+
     </section>
 
     {block name='login_form_footer'}

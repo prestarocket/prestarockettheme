@@ -203,13 +203,14 @@
 
         </div>
 
-        <div class="col-md-3 text-muted col-form-label">
-            {block name='form_field_comment'}
-                {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
+        {block name='form_field_comment'}
+            {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
+                <div class="col-md-3 text-muted col-form-label">
+
                     <small>{l s='Optional' d='Shop.Forms.Labels'}</small>
-                {/if}
-            {/block}
-        </div>
+                </div>
+            {/if}
+        {/block}
     </div>
 
 {/if}

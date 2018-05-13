@@ -1,3 +1,6 @@
+body{
+  background-color: $wrapper-bg;
+}
 /* HEADER */
 .l-header{
   background-color: $header-bg;
@@ -20,6 +23,9 @@ ul {
 .material-icons.small{
   font-size: $font-size-base;
 
+}
+.form-group.form-group_forgot-password{
+  margin-top: -($form-group-margin-bottom/2);
 }
 
 /* Slider rm blink effect */
@@ -80,6 +86,13 @@ display: inline-block;
 }
 .-current .card-header{
   background-color: $white;
+}
+
+.nav-tabs-info{
+  font-size: $font-size-base*1.1;
+  .active{
+    font-weight: bold;
+  }
 }
 //body,
 //html {

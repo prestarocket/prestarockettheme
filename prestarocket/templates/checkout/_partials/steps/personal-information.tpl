@@ -32,7 +32,7 @@
 
   {else}
 
-    <ul class="nav nav-inline my-2" role="tablist">
+    <ul class="nav nav-tabs my-2 nav-tabs-info justify-content-center" role="tablist">
       <li class="nav-item">
         <a
           class="nav-link {if !$show_login_form}active{/if}"
@@ -51,10 +51,6 @@
       </li>
 
       <li class="nav-item">
-        <span href="nav-separator"> | </span>
-      </li>
-
-      <li class="nav-item">
         <a
           class="nav-link {if $show_login_form}active{/if}"
           data-link-action="show-login-form"
@@ -68,7 +64,6 @@
         </a>
       </li>
     </ul>
-
     <div class="tab-content">
       <div class="tab-pane {if !$show_login_form}active{/if}" id="checkout-guest-form" role="tabpanel" {if $show_login_form}aria-hidden="true"{/if}>
         {render file='checkout/_partials/customer-form.tpl' ui=$register_form guest_allowed=$guest_allowed}
