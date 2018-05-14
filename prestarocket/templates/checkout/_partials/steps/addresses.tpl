@@ -56,7 +56,8 @@
           }
         </div>
       {elseif $customer.addresses|count > 0}
-        <div id="delivery-addresses" class="address-selector js-address-selector">
+        <div id="delivery-addresses" class="address-selector js-address-selector row">
+
           {include  file        = 'checkout/_partials/address-selector-block.tpl'
                     addresses   = $customer.addresses
                     name        = "id_address_delivery"
@@ -64,6 +65,14 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
           }
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <a href="{$new_address_delivery_url}" class="card bg-light h-100 text-center justify-content-center">
+                    <span class="card-body_add-address">
+                        <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}
+
+                    </span>
+                </a>
+            </div>
         </div>
 
         {if isset($delivery_address_error)}
@@ -72,13 +81,11 @@
           <p class="alert alert-danger js-address-error" name="alert-delivery" style="display: none">{l s="Your address is incomplete, please update it." d="Shop.Notifications.Error"}</p>
         {/if}
 
-        <p class="add-address">
-          <a href="{$new_address_delivery_url}"><i class="material-icons">&#xE145;</i>{l s='add new address' d='Shop.Theme.Actions'}</a>
-        </p>
+
 
         {if $use_same_address && !$cart.is_virtual}
           <p>
-            <a data-link-action="different-invoice-address" href="{$use_different_address_url}">
+            <a class="text-underline" data-link-action="different-invoice-address" href="{$use_different_address_url}">
               {l s='Billing address differs from shipping address' d='Shop.Theme.Checkout'}
             </a>
           </p>
@@ -125,7 +132,7 @@
 
       {if !$form_has_continue_button}
         <div class="clearfix">
-          <button type="submit" class="btn btn-primary continue float-right" name="confirm-addresses" value="1">
+          <button type="submit" class="btn btn-primary btn-lg continue float-right" name="confirm-addresses" value="1">
               {l s='Continue' d='Shop.Theme.Actions'}
           </button>
           <input type="hidden" id="not-valid-addresses" value="{$not_valid_addresses}">

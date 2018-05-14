@@ -20,13 +20,15 @@ ul {
   padding-left: 0;
 }
 
-.material-icons.small{
+.small .material-icons,
+.btn-sm .material-icons{
   font-size: $font-size-base;
 
 }
 .form-group.form-group_forgot-password{
   margin-top: -($form-group-margin-bottom/2);
 }
+
 
 /* Slider rm blink effect */
 
@@ -87,11 +89,37 @@ display: inline-block;
 .-current .card-header{
   background-color: $white;
 }
-
+//Personnal info
 .nav-tabs-info{
   font-size: $font-size-base*1.1;
   .active{
     font-weight: bold;
+  }
+}
+//Addresses
+.accordion .address-selector .card {
+border: 1px solid $card-border-color;
+}
+.address-selector
+{
+  .card{
+    transition: border 0.1s linear;
+
+  }
+.selected .card{
+  border-color: $success;
+  border-width: 2px;
+}
+  .card-header,
+  .card-body{
+    cursor: pointer;
+
+  }
+}
+.card-body_add-address{
+  padding: $card-spacer-y $card-spacer-x;
+  .material-icons{
+    opacity: .8;
   }
 }
 //body,
