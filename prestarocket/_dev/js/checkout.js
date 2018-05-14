@@ -66,3 +66,8 @@ $(document).ready(() => {
     params.deliveryOption.next(".carrier-extra-content").slideDown();
   });
 });
+
+$(document).on('change','.js-input-delivery:checked',function(){
+    $('.js-label-delivery.selected').removeClass('selected');
+    $('#js-'+$(this).attr('id')).addClass('selected');
+});
