@@ -67,27 +67,20 @@
           <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
         </button>
       </h4>
-
-        <div class="row">
-          <div class="col-md-2">
-            <div class="logo-container">
-              {if $selected_delivery_option.logo}
-                <img src="{$selected_delivery_option.logo}" alt="{$selected_delivery_option.name}">
-              {else}
-                &nbsp;
-              {/if}
-            </div>
-          </div>
-          <div class="col-md-4">
-            <span class="carrier-name">{$selected_delivery_option.name}</span>
-          </div>
-          <div class="col-md-4">
-            <span class="carrier-delay">{$selected_delivery_option.delay}</span>
-          </div>
-          <div class="col-md-2">
-            <span class="carrier-price">{$selected_delivery_option.price}</span>
-          </div>
-        </div>
+  <table class="table table-bordered">
+    <tr>
+        {if $selected_delivery_option.logo}
+          <td class="logo-container">
+            <img src="{$selected_delivery_option.logo}" alt="{$selected_delivery_option.name}">
+          </td>
+        {/if}
+      <td class="carrier-name">
+          {$selected_delivery_option.name}
+      </td>
+      <td class="carrier-delay">{$selected_delivery_option.delay}</td>
+      <td class="carrier-price">{$selected_delivery_option.price}</td>
+    </tr>
+  </table>
 
 
 
