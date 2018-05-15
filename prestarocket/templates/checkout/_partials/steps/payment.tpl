@@ -89,30 +89,20 @@
       {l s='By confirming the order, you certify that you have read and agree with all of the conditions below:' d='Shop.Theme.Checkout'}
     </p>
 
-    <form id="conditions-to-approve" method="GET">
-      <ul>
+    <form id="conditions-to-approve" method="GET" class="mt-3 alert alert-info">
         {foreach from=$conditions_to_approve item="condition" key="condition_name"}
-          <li>
-            <div class="float-left">
-              <span class="custom-checkbox">
-                <input  id    = "conditions_to_approve[{$condition_name}]"
-                        name  = "conditions_to_approve[{$condition_name}]"
-                        required
-                        type  = "checkbox"
-                        value = "1"
-                        class = "ps-shown-by-js"
-                >
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-              </span>
-            </div>
-            <div class="condition-label">
-              <label class="js-terms" for="conditions_to_approve[{$condition_name}]">
-                {$condition nofilter}
-              </label>
-            </div>
-          </li>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <input  id    = "conditions_to_approve[{$condition_name}]"
+                    name  = "conditions_to_approve[{$condition_name}]"
+                    required
+                    type  = "checkbox"
+                    value = "1"
+                    class = "ps-shown-by-js custom-control-input"
+            >
+            <label class="custom-control-label" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+          </div>
         {/foreach}
-      </ul>
     </form>
   {/if}
 
@@ -120,9 +110,11 @@
 
   <div id="payment-confirmation">
     <div class="ps-shown-by-js">
-      <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-primary center-block">
+      <p class="text-center">
+      <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-lg btn-primary center-block mt-3 text-uppercase">
         {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
       </button>
+      </p>
       {if $show_final_summary}
         <article class="alert alert-danger mt-2 js-alert-payment-conditions" role="alert" data-alert="danger">
           {l
