@@ -32,7 +32,7 @@
                         'js-current-step' => $step_is_current
                     ]|classnames} card"
   >
-    <div class="card-header" id="heading-{$identifier}">
+    <div class="card-header js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
     <h1 class="step-title h3">
       <i class="material-icons rtl-no-flip done text-success">&#xE876;</i>
       <span class="step-number p-2">{$position}</span>

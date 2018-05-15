@@ -65,9 +65,25 @@ $(document).ready(() => {
     // and show the one related to the selected carrier
     params.deliveryOption.next(".carrier-extra-content").slideDown();
   });
+    prestashop.on('changedCheckoutStep', (params) => {
+
+        if(typeof params.event.currentTarget !== 'undefined'){
+
+            $('.collapse',params.event.currentTarget).not('.show').collapse('show');
+        }
+    });
+
 });
 
-$(document).on('change','.js-input-delivery:checked',function(){
+$(document).on('change','.js-input-delivery:checked', (event) => {
     $('.js-label-delivery.selected').removeClass('selected');
     $('#js-'+$(this).attr('id')).addClass('selected');
 });
+
+$(document).on('click','.js-checkout-step-header', (event) => {
+    let stepIdentifier = $(this).data('identifier');
+    $('#'+stepIdentifier).addClass('-current');
+    $('#content-'+stepIdentifier).collapse('show').scrollTop();
+});
+
+
