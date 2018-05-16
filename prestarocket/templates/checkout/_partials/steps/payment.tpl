@@ -92,7 +92,6 @@
     <form id="conditions-to-approve" method="GET" class="mt-3 alert alert-info">
         {foreach from=$conditions_to_approve item="condition" key="condition_name"}
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
             <input  id    = "conditions_to_approve[{$condition_name}]"
                     name  = "conditions_to_approve[{$condition_name}]"
                     required
