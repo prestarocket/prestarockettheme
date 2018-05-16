@@ -29,6 +29,26 @@ ul {
   margin-top: -($form-group-margin-bottom/2);
 }
 
+//touch spin
+.bootstrap-touchspin
+{
+  > input {
+  max-width: 60px;
+  }
+  .btn {
+    position: relative;
+    z-index: 2;
+  }
+  .input-group-btn{
+    display: flex;
+    &:first-child{
+      margin-right:-$input-border-width;
+    }
+    &:last-child{
+      margin-left:-$input-border-width;
+    }
+  }
+}
 
 /* Slider rm blink effect */
 
