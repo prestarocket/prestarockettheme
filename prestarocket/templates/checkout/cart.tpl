@@ -57,7 +57,7 @@
       </div>
 
       <!-- Right Block: cart subtotal & cart total -->
-      <div class="cart-grid-right col-12 col-lg-4">
+      <div class="cart-grid-right col-12 col-lg-4 mt-3 mt-lg-0">
 
         {block name='cart_summary'}
           <div class="card cart-summary shadow mb-5">

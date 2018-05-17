@@ -87,6 +87,16 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
+//cart summary
+.cart-item:not(:last-child){
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $spacer;
+  padding-bottom: $spacer;
+}
+.product-line-info{
+  margin-bottom: $spacer/2;
+}
 /* CHECKOUT STEP */
 .order-checkout .card-body{
   padding-bottom: 0;
