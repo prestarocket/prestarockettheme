@@ -32,20 +32,21 @@
   <section id="content" class="page-content page-stores">
 
     {foreach $stores as $store}
-      <article id="store-{$store.id}" class="store-item card">
-        <div class="store-item-container clearfix">
-          <div class="col-md-3 store-picture d-none d-md-block">
-            <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}">
+      <article id="store-{$store.id}" class="store-item card shadow mb-3">
+        <div class="store-item-container card-body">
+          <div class="row">
+          <div class="col-md-3 col-lg-4 store-picture d-none d-md-block">
+            <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}" class="img-fluid">
           </div>
-          <div class="col-md-5 col-sm-7 col-12 store-description">
+          <div class="col-md-5 col-sm-7 col-12 col-lg-4 store-description">
             <h3 class="h3 card-title">{$store.name}</h3>
             <address>{$store.address.formatted nofilter}</address>
             {if $store.note || $store.phone || $store.fax || $store.email}
               <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Global'}</strong><i class="material-icons">&#xE409;</i></a>
             {/if}
           </div>
-          <div class="col-md-4 col-sm-5 col-12 divide-left">
-            <table>
+          <div class="col-md-4 col-sm-5 col-12 col-lg-3 border-left">
+            <table class="table table-borderless table-sm">
               {foreach $store.business_hours as $day}
               <tr>
                 <th>{$day.day|truncate:4:'.'}</th>
@@ -80,6 +81,7 @@
               {/if}
             </ul>
           </div>
+        </div>
         </footer>
       </article>
     {/foreach}
