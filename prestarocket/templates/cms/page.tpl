@@ -26,11 +26,12 @@
 
 {block name='page_title'}
   {$cms.meta_title}
+    qsdq
 {/block}
 
 {block name='page_content_container'}
-  <section id="content" class="page-content page-cms page-cms-{$cms.id}">
-
+  <section id="content" class="page-content page-cms page-cms-{$cms.id} card">
+    <div class="card-body">
     {block name='cms_content'}
       {$cms.content nofilter}
     {/block}
@@ -42,6 +43,6 @@
     {block name='hook_cms_print_button'}
       {hook h='displayCMSPrintButton'}
     {/block}
-
+      </div>
   </section>
 {/block}
