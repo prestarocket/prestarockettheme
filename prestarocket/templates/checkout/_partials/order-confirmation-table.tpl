@@ -35,7 +35,7 @@
         <div class="order-line row">
           <div class="col-sm-2 col-3">
             <span class="image">
-              <img src="{$product.cover.medium.url}" />
+              <img src="{$product.cover.medium.url}" class="img-fluid"/>
             </span>
           </div>
           <div class="col-sm-4 col-9 details">
@@ -95,24 +95,24 @@
 
       <hr>
 
-      <table>
+      <table class="table table-borderless table-sm mb-0">
         {foreach $subtotals as $subtotal}
           {if $subtotal.type !== 'tax'}
             <tr>
               <td>{$subtotal.label}</td>
-              <td>{$subtotal.value}</td>
+              <td class="text-right">{$subtotal.value}</td>
             </tr>
           {/if}
         {/foreach}
         {if $subtotals.tax.label !== null}
           <tr class="sub">
             <td>{$subtotals.tax.label}</td>
-            <td>{$subtotals.tax.value}</td>
+            <td class="text-right">{$subtotals.tax.value}</td>
           </tr>
         {/if}
         <tr class="font-weight-bold">
           <td><span class="text-uppercase">{$totals.total.label}</span> {$labels.tax_short}</td>
-          <td>{$totals.total.value}</td>
+          <td class="text-right">{$totals.total.value}</td>
         </tr>
       </table>
     {/block}
