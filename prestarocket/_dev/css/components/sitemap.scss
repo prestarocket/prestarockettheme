@@ -1,38 +1,62 @@
-.sitemap-title {
-  text-transform: capitalize;
-}
+$heightLine: $line-height-base*$font-size-base ;
 
-.sitemap {
-  margin-top: 0.9375rem;
 
-  h2 {
-    color: $gray-darker;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-bottom: 1px solid $gray;
-    margin-left: -15px;
-    width: 100%;
-    height: 35px;
+//
+//.sitemap > li > ul {
+//  margin-top: $heightLine ;
+//
+//}
+
+.sitemap ul {
+
+
+  & > li > ul {
+      margin-top: $heightLine ;
+    }
+
+  li {
+    line-height: $heightLine ;
+    vertical-align: top ;
+    position: relative ;
+
+    a {
+      text-decoration: none ;
+      display: inline-block ;
+
+    }
   }
+
 
   ul {
-    margin-left: -15px;
-    margin-top: 20px;
+    margin-left: $heightLine ;
+    margin-bottom: $heightLine ;
 
-    &.nested {
-      margin-left: 20px;
-    }
 
     li {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-  }
-}
+      position: relative ;
+      &::before {
+        content: "" ;
+        display: inline-block ;
+        width: $heightLine * 2 ;
+        height: 100% ;
+        border-left: 1px #ccc solid ;
+        position: absolute ;
+        top: -$heightLine / 2 ;
+      }
 
-@include media-breakpoint-down(xs) {
-  .sitemap {
-    margin-top: 0;
+
+      &::before {
+        content: "" ;
+        display: inline-block ;
+        width: $heightLine * 2 ;
+        height: $heightLine ;
+        border-bottom: 1px #ccc solid ;
+        position: absolute ;
+        top: -$heightLine / 2 ;
+      }
+      a {
+        margin-left: $heightLine * 2.5 ;
+      }
+    }
   }
 }
