@@ -90,6 +90,10 @@ h1,.h1{
   display: flex;
   justify-content: space-between;
 }
+.media-list__item:not(:last-child){
+  margin-bottom: $spacer/2;
+
+}
 
 //cart summary
 .cart-item:not(:last-child){
