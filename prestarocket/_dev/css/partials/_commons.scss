@@ -1,6 +1,19 @@
 body{
   background-color: $wrapper-bg;
 }
+.l-wrapper{
+  @if $enable-fluid-layout {
+    @extend .container-fluid;
+  } @else {
+    @extend .container;
+  }
+  &--boxed{
+    @extend .container;
+
+  }
+
+}
+
 /* HEADER */
 .l-header{
   background-color: $header-bg;

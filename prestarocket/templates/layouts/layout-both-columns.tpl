@@ -52,9 +52,8 @@
         {include file='_partials/notifications.tpl'}
       {/block}
 
-      <section id="wrapper">
+      <section id="wrapper" class="{block name='wrapperClass'}l-wrapper{/block}">
         {hook h="displayWrapperTop"}
-        <div class="container">
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
           {/block}
@@ -88,7 +87,6 @@
               {/if}
             </div>
           {/block}
-        </div>
         </div>
         {hook h="displayWrapperBottom"}
       </section>

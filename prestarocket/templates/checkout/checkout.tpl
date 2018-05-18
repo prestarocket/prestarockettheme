@@ -47,9 +47,8 @@
       {include file='_partials/notifications.tpl'}
     {/block}
 
-    <section id="wrapper">
+    <section id="wrapper" class="l-wrapper l-wrapper--boxed">
       {hook h="displayWrapperTop"}
-      <div class="container">
 
       {block name='content'}
         <section id="content">
@@ -70,7 +69,6 @@
           </div>
         </section>
       {/block}
-      </div>
       {hook h="displayWrapperBottom"}
     </section>
 
