@@ -26,7 +26,6 @@
 
 {block name='page_title'}
   {$cms.meta_title}
-    qsdq
 {/block}
 
 {block name='page_content_container'}
