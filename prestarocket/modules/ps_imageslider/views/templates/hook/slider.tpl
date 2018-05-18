@@ -31,7 +31,7 @@
       {foreach from=$homeslider.slides item=slide name='homeslider'}
             <a href="{$slide.url}" class="d-block">
               <figure>
-                <img data-lazy="{$slide.image_url}" alt="{$slide.legend|escape}">
+                <img data-lazy="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100">
                   {if $slide.title || $slide.description}
                     <figcaption class="slider-caption">
                       <h2 class="display-1 text-uppercase">{$slide.title}</h2>
