@@ -18,3 +18,20 @@
     }
   }
 }
+
+.address{
+  @extend .card;
+}
+.address-header{
+  @extend .card-header;
+  background-color: transparent;
+}
+.address-body{
+  @extend .card-body;
+}
+.address-footer{
+  @extend .card-footer;
+  display: flex;
+  justify-content: space-between;
+
+}
