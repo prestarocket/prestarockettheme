@@ -62,4 +62,9 @@
   {$HOOK_HEADER nofilter}
 {/block}
 
+{block name='microdata_head'}
+  {include file="_partials/microdata-json.tpl"}
+{/block}
+
+
 {block name='hook_extra'}{/block}
