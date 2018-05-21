@@ -2,9 +2,21 @@
 // Color system
 //
 $primary:       #2fb5d2;
+//$gray-900: #232323;
+
+
 // Options
 $enable-rounded:            false;
 $enable-shadows:            true;
+
+//
+// Links
+//
+// Style anchor elements.
+
+$link-color:                #545454;
+$link-hover-color:          darken($primary, 15%);
+$link-hover-decoration:     none;
 
 // Fonts
 //

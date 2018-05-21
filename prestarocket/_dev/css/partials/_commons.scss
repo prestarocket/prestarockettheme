@@ -1,6 +1,9 @@
 body{
   background-color: $wrapper-bg;
 }
+a{
+  text-decoration: none;
+}
 .l-wrapper{
   @if $enable-fluid-layout {
     @extend .container-fluid;

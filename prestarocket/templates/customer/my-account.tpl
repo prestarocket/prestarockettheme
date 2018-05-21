@@ -29,8 +29,7 @@
 {/block}
 
 {block name='page_content'}
-  <div class="row">
-    <div class="links">
+  <div class="row account-links">
 
       <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="identity-link" href="{$urls.pages.identity}">
         <span class="link-item">
@@ -95,7 +94,6 @@
         {hook h='displayCustomerAccount'}
       {/block}
 
-    </div>
   </div>
 {/block}
 
