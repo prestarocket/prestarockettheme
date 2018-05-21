@@ -29,8 +29,7 @@
 {/block}
 
 {block name='page_content_container'}
-    <div class="card">
-        <div class="card-body">
+<section id="content" class="page-content page-content--sitemap">
             <div class="row sitemap">
                 <div class="col-md-3">
                     <h2>{$our_offers}</h2>
@@ -49,6 +48,8 @@
                     {include file='cms/_partials/sitemap-nested-list.tpl' links=$links.pages}
                 </div>
             </div>
-        </div>
-    </div>
+</section>
 {/block}
+{block name='page_footer_container'}
+{/block}
+

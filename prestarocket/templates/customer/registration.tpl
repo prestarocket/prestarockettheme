@@ -37,3 +37,5 @@
       </section>
     {/block}
 {/block}
+{block name='page_footer_container'}
+{/block}

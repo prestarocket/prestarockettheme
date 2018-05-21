@@ -52,7 +52,7 @@
         {include file='_partials/notifications.tpl'}
       {/block}
 
-      <section id="wrapper" class="{block name='wrapperClass'}l-wrapper{/block}">
+      <section id="wrapper" class="{block name='layoutWrapperClass'}l-wrapper{/block}">
         {hook h="displayWrapperTop"}
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
@@ -69,7 +69,7 @@
           {/block}
 
           {block name="content_wrapper"}
-            <div id="content-wrapper" class="left-column right-column col-md-6">
+            <div id="content-wrapper" class="{block name='contentWrapperClass'}left-column right-column col-md-6{/block}">
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>

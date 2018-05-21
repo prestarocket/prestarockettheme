@@ -24,6 +24,11 @@
  *}
 {extends file='customer/page.tpl'}
 
+{block name='pageWrapperClass'}{/block}
+{block name='pageHeaderClass'}{/block}
+{block name='pageContentClass'}{/block}
+{block name='pageFooterClass'}{/block}
+
 {block name='page_title'}
   {l s='Your account' d='Shop.Theme.Customeraccount'}
 {/block}

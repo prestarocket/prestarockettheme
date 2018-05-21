@@ -25,30 +25,27 @@
 {extends file=$layout}
 
 {block name='content'}
-
-  <section id="main">
+  <section id="main" class="{block name='pageWrapperClass'}page-wrapper {/block}page-wrapper--{$page.page_name}">
 
     {block name='page_header_container'}
       {block name='page_title' hide}
-        <header class="page-header">
+        <header class="{block name='pageHeaderClass'}page-header {/block}page-header--{$page.page_name}">
           <h1>{$smarty.block.child}</h1>
         </header>
       {/block}
     {/block}
 
     {block name='page_content_container'}
-      <section id="content" class="page-content card card-block">
-          <div class="card-body">
+      <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
         {block name='page_content_top'}{/block}
         {block name='page_content'}
           <!-- Page content -->
         {/block}
-          </div>
       </section>
     {/block}
 
     {block name='page_footer_container'}
-      <footer class="page-footer">
+      <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">
         {block name='page_footer'}
           <!-- Footer content -->
         {/block}

@@ -16,7 +16,23 @@ a{
   }
 
 }
+.page-wrapper{
+  @extend .card;
 
+}
+.page-header{
+  @extend .card-header;
+  h1{
+    margin-bottom: 0;
+  }
+}
+.page-content{
+  @extend .card-body;
+}
+.page-footer{
+  @extend .card-footer;
+
+}
 /* HEADER */
 .l-header{
   background-color: $header-bg;

@@ -27,7 +27,7 @@
 {block name='notifications'}{/block}
 
 {block name='page_content_container'}
-  <section id="content" class="page-content">
+  <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
     {block name='page_content_top'}
       {block name='customer_notifications'}
         {include file='_partials/notifications.tpl'}
@@ -39,8 +39,12 @@
   </section>
 {/block}
 
-{block name='page_footer'}
-  {block name='my_account_links'}
-    {include file='customer/_partials/my-account-links.tpl'}
-  {/block}
+{block name='page_footer_container'}
+  <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">
+      {block name='page_footer'}
+          {block name='my_account_links'}
+              {include file='customer/_partials/my-account-links.tpl'}
+          {/block}
+      {/block}
+  </footer>
 {/block}
