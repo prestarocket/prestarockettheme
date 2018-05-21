@@ -25,7 +25,6 @@
 
 {if isset($notifications)}
 <aside id="notifications">
-  <div class="container">
     {if $notifications.error}
       {block name='notifications_error'}
         <article class="alert alert-danger" role="alert" data-alert="danger">
@@ -73,6 +72,5 @@
         </article>
       {/block}
     {/if}
-  </div>
 </aside>
 {/if}
