@@ -70,12 +70,12 @@
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: $font-size-base*1.5;  /* Preferred icon size */
   display: inline-block;
   vertical-align: middle;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
+  //width: $font-size-base * 1.125;
+  //height: $font-size-base* 1.125;
+  line-height: $font-size-base * .875;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
