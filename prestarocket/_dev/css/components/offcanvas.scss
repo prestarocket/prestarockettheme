@@ -1,0 +1,36 @@
+.offcanvas{
+  position :fixed ;
+  top: 0;
+  right: 0;
+  z-index: $zindex-offcanvas;
+  width: $offcanvas-width;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -13px 0 20px rgba(119, 131, 143, 0.08);
+  overflow-y: auto;
+  padding: 1rem;
+  display: none;
+}
+.offcanvas-dialog{
+  position: relative;
+}
+.offcanvas-open {
+  overflow: hidden;
+}
+.offcanvas.show .offcanvas-dialog {
+  transform: translate(0);
+}
+
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-modal-backdrop;
+  background-color: $modal-backdrop-bg;
+
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+  &.show { opacity: $modal-backdrop-opacity; }
+}

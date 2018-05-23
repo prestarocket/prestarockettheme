@@ -13,3 +13,8 @@ $pm-title-font-weight:      400;
 
 //cart
 $promo-code-bg:       darken($body-bg,10%);
+
+//offcanvas
+$zindex-offcanvas :   $zindex-modal;
+$offcanvas-width :       300px;
+
