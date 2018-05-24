@@ -54,3 +54,17 @@
     </div>
   </div>
 </div>
+<div id="mobile_top_menu_wrapper" class="offcanvas fade">
+  <div class="offcanvas-dialog">
+  <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+  <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+  <div class="js-top-menu-bottom">
+    <div id="_mobile_currency_selector"></div>
+    <div id="_mobile_language_selector"></div>
+    <div id="_mobile_contact_link"></div>
+  </div>
+  </div>
+</div>

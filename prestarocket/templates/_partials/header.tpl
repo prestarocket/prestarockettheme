@@ -40,9 +40,9 @@
         </div>
       </div>
       <div class="d-md-none d-flex justify-content-between align-items-center w-100 mobile no-gutters">
-        <div id="menu-icon" class="col">
+        <button id="menu-icon" class="btn" data-toggle="offcanvas" data-target="#mobile_top_menu_wrapper">
           <i class="material-icons d-inline">&#xE5D2;</i>
-        </div>
+        </button>
         <div class="flex-grow-1 top-logo text-center" id="_mobile_logo"></div>
         <div class="col d-flex align-items-center justify-content-end right-nav">
           <div id="_mobile_user_info"></div>
@@ -64,14 +64,6 @@
         </div>
         <div class="col-md-10 col-sm-12 d-flex align-items-center justify-content-between position-static">
             {hook h='displayTop'}
-        </div>
-      </div>
-      <div id="mobile_top_menu_wrapper" class="row d-md-none flex-column" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-        <div class="js-top-menu-bottom">
-          <div id="_mobile_currency_selector"></div>
-          <div id="_mobile_language_selector"></div>
-          <div id="_mobile_contact_link"></div>
         </div>
       </div>
     </div>
