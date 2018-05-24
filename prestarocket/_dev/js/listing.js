@@ -97,6 +97,11 @@ $(document).ready(() => {
     prestashop.emit('updateFacets', $(event.target).closest('a').get(0).href);
   });
 
+  $('body').on('change','#select-sort-order', function () {
+      var urlsearch = $(this).val();
+      prestashop.emit('updateFacets',urlsearch);
+  });
+
   $('body').on('change', '#search_filters select', function (event) {
     const form = $(event.target).closest('form');
     prestashop.emit('updateFacets', '?' + form.serialize());
