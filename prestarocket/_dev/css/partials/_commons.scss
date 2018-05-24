@@ -16,7 +16,7 @@ a{
   }
 
 }
-.page-wrapper{
+.page-wrapper,.card-block{
   @extend .card;
 
 }
@@ -26,8 +26,11 @@ a{
     margin-bottom: 0;
   }
 }
-.page-content{
+.page-content,.card-block{
   @extend .card-body;
+}
+.card-block{
+  @extend .shadow;
 }
 .page-footer{
   @extend .card-footer;

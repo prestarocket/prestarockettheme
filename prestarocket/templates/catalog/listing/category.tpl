@@ -26,17 +26,21 @@
 
 {block name='product_list_header'}
     <div class="block-category card-block d-none d-md-block">
-      <h1 class="h1">{$category.name}</h1>
-      {if $category.description}
-        <div id="category-description" class="text-muted">{$category.description nofilter}</div>
-      {/if}
-      {if $category.image.large.url}
-        <div class="category-cover">
-          <img src="{$category.image.large.url}" alt="{$category.image.legend}">
+        <div id="_desktop_category_header">
+            <h1 class="h1">{$category.name}</h1>
         </div>
-      {/if}
+        {if $category.description || $category.image.large.url}
+            <div class="d-flex">
+                {if $category.description}
+                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
+                {/if}
+                {if $category.image.large.url}
+                    <div class="category-cover">
+                        <img src="{$category.image.large.url}" alt="{$category.image.legend}">
+                    </div>
+                {/if}
+            </div>
+        {/if}
     </div>
-    <div class="text-sm-center d-md-none">
-      <h1 class="h1">{$category.name}</h1>
-    </div>
+    <div class="_mobile_category_header"></div>
 {/block}
