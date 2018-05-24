@@ -36,6 +36,11 @@ a{
   @extend .card-footer;
 
 }
+
+.left-column > div,
+.right-column > div{
+  margin-bottom: $spacer;
+}
 /* HEADER */
 .l-header{
   background-color: $header-bg;
