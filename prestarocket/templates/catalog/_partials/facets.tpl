@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-  <div id="search_filters" class="card-block">
+  <div id="search_filters" class="search_filters">
 
     {block name='facets_title'}
       <p class="text-uppercase h6 d-none d-md-block">{l s='Filter By' d='Shop.Theme.Actions'}</p>

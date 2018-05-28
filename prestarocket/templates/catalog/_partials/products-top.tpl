@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-top" class="row justify-content-between products-selection mt-3 mb-2 align-items-center">
+<div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
   <div class="col-md-6 d-none d-md-block total-products">
     {if $listing.pagination.total_items > 1}
       <p class="mb-0">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
@@ -38,19 +38,19 @@
       {/block}
 
       {if !empty($listing.rendered_facets)}
-          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none">
+          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="offcanvas">
             {l s='Filter' d='Shop.Theme.Actions'}
           </button>
       {/if}
     </div>
   </div>
-
+    <div class="d-md-none text-sm-center mt-1 col-12 ">
+        {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
+        '%from%' => $listing.pagination.items_shown_from ,
+        '%to%' => $listing.pagination.items_shown_to,
+        '%total%' => $listing.pagination.total_items
+        ]}
+    </div>
 </div>
 
-<div class="d-md-none text-sm-center mb-3">
-    {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
-    '%from%' => $listing.pagination.items_shown_from ,
-    '%to%' => $listing.pagination.items_shown_to,
-    '%total%' => $listing.pagination.total_items
-    ]}
-</div>
+

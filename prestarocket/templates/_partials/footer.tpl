@@ -68,3 +68,12 @@
   </div>
   </div>
 </div>
+
+<div id="offcanvas_search_filter" class="offcanvas fade">
+  <div class="offcanvas-dialog">
+    <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div id="_mobile_search_filters_wrapper"></div>
+  </div>
+</div>

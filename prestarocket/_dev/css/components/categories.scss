@@ -9,3 +9,8 @@
 .block-categories {
   @extend .shadow;
 }
+
+
+.left-column .search_filters {
+  @extend .card-block;
+}
