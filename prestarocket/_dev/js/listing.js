@@ -103,8 +103,8 @@ $(document).ready(() => {
   });
 
   $('body').on('change', '#search_filters select', function (event) {
-    const form = $(event.target).closest('form');
-    prestashop.emit('updateFacets', '?' + form.serialize());
+      var urlsearch = $(this).val();
+    prestashop.emit('updateFacets', urlsearch);
   });
 
   prestashop.on('updateProductList', (data) => {
