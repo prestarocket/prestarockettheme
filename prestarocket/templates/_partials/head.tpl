@@ -39,6 +39,8 @@
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
   {/if}
+  {include file="_partials/pagination_seo.tpl" stylesheets=$stylesheets}
+
 {/block}
 
 {block name='head_viewport'}
