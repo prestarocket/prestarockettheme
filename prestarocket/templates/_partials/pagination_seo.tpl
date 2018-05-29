@@ -22,15 +22,33 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
 * International Registered Trademark & Property of PrestaShop SA
 *}
+{* not big fan of this code but it's is the only way to do it without module *}
 {if isset($listing.pagination) && $listing.pagination.should_be_displayed}
+    {assign page_nb 1}
     {if isset($smarty.get.page)}
         {assign page_nb $smarty.get.page|intval}
-        {if $page_nb >= 2}
-            {assign prev $listing.pagination.pages[$page_nb-1]['url']|replace:'?page=1':''|replace:'&page=1':''}
+    {/if}
+
+        {assign var="prev" value=false}
+        {assign var="next" value=false}
+
+        {foreach from=$listing.pagination.pages item="page"}
+            {if $page.page == ($page_nb - 1) && $page.type == "page"}
+                {assign prev $page.url}
+                {if ($page_nb - 1) == 1}
+                    {assign prev $prev|replace:'?page=1':''|replace:'&page=1':''}
+                {/if}
+            {/if}
+            {if $page.page == ($page_nb + 1) && $page.type == "page"}
+                {assign next $page.url}
+                {break}
+            {/if}
+        {/foreach}
+
+        {if $prev}
             <link rel="prev" href="{$prev}">
         {/if}
-        {if $listing.pagination.total_items > $listing.pagination.items_shown_to}
-            <link rel="next" href="{$listing.pagination.pages[$page_nb+1]['url']}">
+        {if $next}
+            <link rel="next" href="{$next}">
         {/if}
-    {/if}
 {/if}
