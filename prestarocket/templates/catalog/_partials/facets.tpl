@@ -30,13 +30,12 @@
 
     {block name='facets_clearall_button'}
       <div id="_desktop_search_filters_clear_all" class="d-none d-md-block clear-all-wrapper">
-        <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
+        <button data-search-url="{$clear_all_link}" class="btn btn-secondary btn-block js-search-filters-clear-all mb-3">
           <i class="material-icons">&#xE14C;</i>
           {l s='Clear all' d='Shop.Theme.Actions'}
         </button>
       </div>
     {/block}
-
     {foreach from=$facets item="facet"}
       {if $facet.displayed}
         <div class="facet clearfix facet-block">
@@ -68,7 +67,7 @@
                                 data-search-url="{$filter.nextEncodedFacetsURL}"
                                 type="{if $facet.multipleSelectionAllowed}checkbox{else}radio{/if}"
                                 class="custom-control-input"
-                                {if $filter.active } checked {/if}
+                                {if $filter.active } checked{/if}
                         >
                         <label class="custom-control-label" for="facet_input_{$_expand_id}_{$filter_key}">
                             {if isset($filter.properties.color)}
