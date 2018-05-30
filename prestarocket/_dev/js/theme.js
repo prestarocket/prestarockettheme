@@ -35,6 +35,8 @@ import 'bootstrap/js/src/tab';
 import 'bootstrap/js/src/tooltip';
 // import 'flexibility';
 import 'bootstrap-touchspin';
+import './lib/slick.min';
+import SlickSlider from './components/slick';
 
 import './responsive';
 import './checkout';
@@ -53,8 +55,6 @@ import EventEmitter from 'events';
 
 
 import './components/block-cart';
-import './lib/slick.min';
-import SlickSlider from './components/slick';
 
 // "inherit" EventEmitter
 for (var i in EventEmitter.prototype) {

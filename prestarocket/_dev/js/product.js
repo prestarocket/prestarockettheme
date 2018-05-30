@@ -23,14 +23,20 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
 import $ from 'jquery';
+import prestashop from 'prestashop';
+import SlickSlider from './components/slick';
 
 $(document).ready(function () {
   createProductSpin();
   createInputFile();
 
   prestashop.on('updatedProduct', function (event) {
-    createInputFile();
-    if (event && event.product_minimal_quantity) {
+      createInputFile();
+
+      let slickSlider = new SlickSlider();
+      slickSlider.init();
+
+      if (event && event.product_minimal_quantity) {
       const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
       const quantityInputSelector = '#quantity_wanted';
       let quantityInput = $(quantityInputSelector);
@@ -78,4 +84,5 @@ $(document).ready(function () {
       return false;
     });
   }
+
 });

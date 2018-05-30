@@ -24,12 +24,32 @@
  *}
 <div class="images-container">
   {block name='product_cover'}
-    <div class="product-cover">
-      <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">
-      <div class="layer d-none d-md-block" data-toggle="modal" data-target="#product-modal">
-        <i class="material-icons zoom-in">&#xE8FF;</i>
-      </div>
-    </div>
+  <div data-slick data-count="{$product.images|count}">
+    <img class="img-fluid" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+      {foreach from=$product.images item=image}
+          {if $image.id_image != $product.cover.id_image}
+            <img
+                    class="thumb js-thumb img-fluid"
+                    data-image-medium-src="{$image.bySize.medium_default.url}"
+                    data-image-large-src="{$image.bySize.large_default.url}"
+                    src="{$image.bySize.large_default.url}"
+                    alt="{$image.legend}"
+                    title="{$image.legend}"
+                    itemprop="image"
+            >
+          {/if}
+      {/foreach}
+  </div>
+
+
+
+
+    {*<div class="product-cover">*}
+      {*<img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">*}
+      {*<div class="layer d-none d-md-block" data-toggle="modal" data-target="#product-modal">*}
+        {*<i class="material-icons zoom-in">&#xE8FF;</i>*}
+      {*</div>*}
+    {*</div>*}
   {/block}
 
   {block name='product_images'}
