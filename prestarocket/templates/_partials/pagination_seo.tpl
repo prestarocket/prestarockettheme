@@ -31,19 +31,14 @@
 
         {assign var="prev" value=false}
         {assign var="next" value=false}
-
-        {foreach from=$listing.pagination.pages item="page"}
-            {if $page.page == ($page_nb - 1) && $page.type == "page"}
-                {assign prev $page.url}
-                {if ($page_nb - 1) == 1}
-                    {assign prev $prev|replace:'?page=1':''|replace:'&page=1':''}
-                {/if}
-            {/if}
-            {if $page.page == ($page_nb + 1) && $page.type == "page"}
-                {assign next $page.url}
-                {break}
-            {/if}
-        {/foreach}
+    {if ($page_nb - 1) == 1}
+        {assign prev $page.canonical}
+    {elseif $page_nb > 2}
+        {assign var="prev"  value=($page['canonical']|cat:'?page='|cat:($page_nb - 1))}
+    {/if}
+    {if $listing.pagination.total_items > $listing.pagination.items_shown_to}
+        {assign var="next"  value=($page['canonical']|cat:'?page='|cat:($page_nb + 1))}
+    {/if}
 
         {if $prev}
             <link rel="prev" href="{$prev}">
