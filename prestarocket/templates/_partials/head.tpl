@@ -36,6 +36,12 @@
   {if $page.meta.robots !== 'index'}
     <meta name="robots" content="{$page.meta.robots}">
   {/if}
+    {* if listing is sort or with facet *}
+  {if ($page.meta.robots === 'index' && isset($smarty.get.order)) || ($page.meta.robots === 'index' && isset($smarty.get.q))}
+    <meta name="robots" content="none">
+  {/if}
+
+
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}{if isset($smarty.get.page) && $smarty.get.page > 1}?page={$smarty.get.page}{/if}">
   {/if}
