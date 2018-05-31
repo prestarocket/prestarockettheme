@@ -1,0 +1,35 @@
+.no-js img.lazyload {
+  display: none;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+//lazysizes with slick slider
+.slick-slide{
+  &.lazyload{
+    display: none!important;
+  }
+  & .lazyload{
+    display: none!important;
+  }
+}
+
+.slick-active{
+  &.lazyload{
+    display: block!important;
+  }
+  & .lazyload{
+    display: block!important;
+  }
+}
+
+
+

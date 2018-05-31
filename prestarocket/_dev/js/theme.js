@@ -55,6 +55,8 @@ import EventEmitter from 'events';
 
 
 import './components/block-cart';
+import lazysizes from 'lazysizes'
+
 
 // "inherit" EventEmitter
 for (var i in EventEmitter.prototype) {
