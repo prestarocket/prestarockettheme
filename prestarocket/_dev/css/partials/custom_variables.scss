@@ -21,3 +21,12 @@ $promo-code-bg:       darken($body-bg,10%);
 $zindex-offcanvas :   $zindex-modal;
 $offcanvas-width :       300px;
 
+//product slider
+$product-thumb-margin:5px;
+$product-thumb-width:100px;
+$product-thumb-height:100px;
+$product-to-show:3;
+$product-thumb-wrap-width:($product-thumb-width * $product-to-show + (2*$product-thumb-margin*$product-to-show));
+$product-thumb-wrap-height:($product-thumb-height + (2*$product-thumb-margin*$product-to-show));
+
+

@@ -93,14 +93,37 @@ h1,.h1{
   }
 }
 
-/* Slider rm blink effect */
+/* minimizing reflows and avoiding page jumps */
 
-.ir {
+.rc {
   position: relative;
   width: 100%;
   height: 0;
   overflow: hidden;
+  padding-bottom: 100%;
 }
+
+.rc > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ratio2_1{
+  padding-bottom: 50%;
+}
+.ratio1_2{
+  padding-bottom: 200%;
+}
+.ratio4_3{
+  padding-bottom: 75%;
+}
+.ratio16_9{
+  padding-bottom: 56.25%;
+}
+
 
 /* collapse icons */
 .icon-collapse{

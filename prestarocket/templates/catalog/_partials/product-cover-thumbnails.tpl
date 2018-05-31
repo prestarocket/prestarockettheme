@@ -24,53 +24,66 @@
  *}
 <div class="images-container">
   {block name='product_cover'}
-  <div data-slick data-count="{$product.images|count}">
-    <img class="img-fluid" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+  <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-images","rows": 0}{/literal}' data-count="{$product.images|count}">
+   <div class="product-img">
+       <div class="rc">
+    <img class="img-fluid lazyload shadow" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+       </div>
+   </div>
+
       {foreach from=$product.images item=image}
           {if $image.id_image != $product.cover.id_image}
-            <img
-                    class="thumb js-thumb img-fluid"
+
+      <div class="product-img">
+          <div class="rc">
+
+          <img
+                    class="thumb js-thumb img-fluid lazyload shadow"
                     data-image-medium-src="{$image.bySize.medium_default.url}"
                     data-image-large-src="{$image.bySize.large_default.url}"
-                    src="{$image.bySize.large_default.url}"
+                    data-src="{$image.bySize.large_default.url}"
                     alt="{$image.legend}"
                     title="{$image.legend}"
                     itemprop="image"
             >
+          </div>
+      </div>
           {/if}
       {/foreach}
+
   </div>
-
-
-
-
-    {*<div class="product-cover">*}
-      {*<img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">*}
-      {*<div class="layer d-none d-md-block" data-toggle="modal" data-target="#product-modal">*}
-        {*<i class="material-icons zoom-in">&#xE8FF;</i>*}
-      {*</div>*}
-    {*</div>*}
   {/block}
 
   {block name='product_images'}
-    <div class="js-qv-mask mask">
-      <ul class="product-images js-qv-product-images">
-        {foreach from=$product.images item=image}
-          <li class="thumb-container">
-            <img
-              class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
-              data-image-medium-src="{$image.bySize.medium_default.url}"
-              data-image-large-src="{$image.bySize.large_default.url}"
-              src="{$image.bySize.home_default.url}"
+      {if $product.images|count > 1}
+      <div class="product-images js-qv-product-images" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": 3, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":true,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
+          <div class="product-thumb slick-active">
+              <div class="rc">
+                  <img
+                      class="thumb js-thumb lazyload img-fluid"
+                      data-src="{$product.cover.bySize.home_default.url}"
+                      alt="{$product.cover.legend}" title="{$product.cover.legend}"
+                      itemprop="image"
+              >
+              </div>
+          </div>
+          {foreach from=$product.images item=image}
+              {if $image.id_image != $product.cover.id_image}
+          <div class="product-thumb">
+              <div class="rc">
+              <img
+              class="thumb js-thumb lazyload img-fluid"
+              data-src="{$image.bySize.home_default.url}"
               alt="{$image.legend}"
               title="{$image.legend}"
-              width="100"
               itemprop="image"
             >
-          </li>
+              </div>
+          </div>
+              {/if}
         {/foreach}
-      </ul>
-    </div>
+      </div>
+      {/if}
   {/block}
 </div>
 {hook h='displayAfterProductThumbs'}
