@@ -26,15 +26,18 @@
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
 
-<div class="ir" style="padding-bottom:{$paddingbottom}%">
-  <div id="carousel" data-slick data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
+<div class="rc" style="padding-bottom:{$paddingbottom}%">
+  <div id="carousel" class="" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
-            <a href="{$slide.url}" class="d-block">
+            <a href="{$slide.url}" class="d-block position-relative">
               <figure>
-                <img data-lazy="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100">
+                <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload">
+                  <noscript>
+                      <img src="{$slide.image_url}">
+                  </noscript>
                   {if $slide.title || $slide.description}
                     <figcaption class="slider-caption">
-                      <h2 class="display-1 text-uppercase">{$slide.title}</h2>
+                      <p class="display-1 text-uppercase">{$slide.title}</p>
                       <div class="caption-description">{$slide.description nofilter}</div>
                     </figcaption>
                   {/if}
