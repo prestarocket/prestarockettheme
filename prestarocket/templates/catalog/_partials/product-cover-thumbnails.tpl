@@ -28,6 +28,9 @@
    <div class="product-img">
        <div class="rc">
     <img class="img-fluid lazyload shadow" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+   <noscript>
+       <img class="img-fluid lazyload shadow" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
+   </noscript>
        </div>
    </div>
 
@@ -46,6 +49,9 @@
                     title="{$image.legend}"
                     itemprop="image"
             >
+              <noscript>
+                  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
+              </noscript>
           </div>
       </div>
           {/if}
