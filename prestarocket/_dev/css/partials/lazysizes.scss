@@ -9,7 +9,7 @@
 }
 .lazyloaded {
   opacity: 1;
-  transition: opacity 300ms;
+  transition: opacity 500ms;
 }
 
 //lazysizes with slick slider
@@ -22,7 +22,10 @@
   }
 }
 
-.slick-active{
+.slick-active,
+//weird bug slick slider don t add slick active sometimes
+.slick-current,
+.slick-current + .slick-slide{
   &.lazyload{
     display: block!important;
   }

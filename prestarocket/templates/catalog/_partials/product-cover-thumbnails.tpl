@@ -24,12 +24,13 @@
  *}
 <div class="images-container">
   {block name='product_cover'}
-  <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-images","rows": 0}{/literal}' data-count="{$product.images|count}">
+      <div class="position-relative">
+  <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
        <div class="rc">
-    <img class="img-fluid lazyload shadow" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+    <img class="img-fluid lazyload" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
    <noscript>
-       <img class="img-fluid lazyload shadow" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
+       <img class="img-fluid" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
    </noscript>
        </div>
    </div>
@@ -39,9 +40,8 @@
 
       <div class="product-img">
           <div class="rc">
-
           <img
-                    class="thumb js-thumb img-fluid lazyload shadow"
+                    class="thumb js-thumb img-fluid lazyload"
                     data-image-medium-src="{$image.bySize.medium_default.url}"
                     data-image-large-src="{$image.bySize.large_default.url}"
                     data-src="{$image.bySize.large_default.url}"
@@ -56,13 +56,16 @@
       </div>
           {/if}
       {/foreach}
-
+  </div>
+      <div class="layer hidden-sm-down product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+          <i class="material-icons zoom-in">&#xE8FF;</i>
+      </div>
   </div>
   {/block}
 
   {block name='product_images'}
       {if $product.images|count > 1}
-      <div class="product-images js-qv-product-images" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": 3, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":true,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
+      <div class="product-thumbs js-qv-product-images" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
           <div class="product-thumb slick-active">
               <div class="rc">
                   <img
