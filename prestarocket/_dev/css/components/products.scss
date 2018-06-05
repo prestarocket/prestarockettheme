@@ -4,7 +4,7 @@
 
 }
 .product-miniature{
-  @include make-col(12);
+  @include make-col(6);
 
 }
 @include media-breakpoint-up(md) {
