@@ -4,6 +4,9 @@ body{
 a{
   text-decoration: none;
 }
+sup{
+  top:-0.3em;
+}
 .l-wrapper{
   @if $enable-fluid-layout {
     @extend .container-fluid;

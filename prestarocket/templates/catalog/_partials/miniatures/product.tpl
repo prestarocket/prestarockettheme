@@ -69,14 +69,15 @@
                                     {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
                                     <span class="sr-only">{l s='Regular price' d='Shop.Theme.Catalog'}</span>
-                                    <span class="regular-price">{$product.regular_price}</span>
+                                    <span class="regular-price">{splitprice price=$product.regular_price}</span>
 
                                 {/if}
 
                                 {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
                                 <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                                <span itemprop="price" class="price">{$product.price}</span>
+                                <span itemprop="price" class="price">{splitprice price=$product.price}</span>
+
 
                                 {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
