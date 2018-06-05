@@ -122,6 +122,22 @@ global_settings:
       width: 170
       height: 115
       scope: [stores]
+    pdt_180:
+      width: 180
+      height: 180
+      scope: [products]
+    pdt_300:
+      width: 300
+      height: 300
+      scope: [products]
+    pdt_360:
+      width: 360
+      height: 360
+      scope: [products]
+    pdt_540:
+      width: 540
+      height: 540
+      scope: [products]
 
 theme_settings:
   default_layout: layout-full-width
