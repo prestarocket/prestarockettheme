@@ -26,12 +26,15 @@
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
 
-<div class="rc" style="padding-bottom:{$paddingbottom}%">
-  <div id="carousel" class="" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
+  <div id="carousel" class="carousel" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
-            <a href="{$slide.url}" class="d-block position-relative">
+
+      <a href="{$slide.url}" class="d-block position-relative">
               <figure>
-                <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload">
+                  <div class="rc" style="padding-top:{$paddingbottom}%">
+                  <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
+                  </div>
+
                   <noscript>
                       <img src="{$slide.image_url}">
                   </noscript>
@@ -44,6 +47,5 @@
               </figure>
             </a>
       {/foreach}
-  </div>
 </div>
 {/if}
