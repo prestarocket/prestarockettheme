@@ -57,9 +57,9 @@
           {/if}
       {/foreach}
   </div>
-      <div class="layer hidden-sm-down product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+      <button type="button" class="btn btn-link btn-zoom hidden-sm-down product-layer-zoom" data-toggle="modal" data-target="#product-modal">
           <i class="material-icons zoom-in">&#xE8FF;</i>
-      </div>
+      </button>
   </div>
   {/block}
 
