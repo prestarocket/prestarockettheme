@@ -28,9 +28,19 @@
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
        <div class="rc">
-    <img class="img-fluid lazyload" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+    <img class="img-fluid lazyload"
+            data-sizes="auto"
+         data-srcset="{$product.cover.bySize.medium_default.url} 452w,
+           {$product.cover.bySize.pdt_180.url} 180w,
+           {$product.cover.bySize.pdt_300.url} 300w,
+           {$product.cover.bySize.pdt_360.url} 360w,
+           {$product.cover.bySize.pdt_540.url} 540w"
+         data-src="{$product.cover.bySize.medium_default.url}"
+         alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+
+
    <noscript>
-       <img class="img-fluid" data-src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
+       <img class="img-fluid" data-src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" itemprop="image">
    </noscript>
        </div>
    </div>
@@ -42,9 +52,13 @@
           <div class="rc">
           <img
                     class="thumb js-thumb img-fluid lazyload"
-                    data-image-medium-src="{$image.bySize.medium_default.url}"
-                    data-image-large-src="{$image.bySize.large_default.url}"
-                    data-src="{$image.bySize.large_default.url}"
+                    data-sizes="auto"
+                    data-srcset="{$image.bySize.medium_default.url} 452w,
+                   {$image.bySize.pdt_180.url} 180w,
+                   {$image.bySize.pdt_300.url} 300w,
+                   {$image.bySize.pdt_360.url} 360w,
+                   {$image.bySize.pdt_540.url} 540w"
+                    data-src="{$image.bySize.medium_default.url}"
                     alt="{$image.legend}"
                     title="{$image.legend}"
                     itemprop="image"
@@ -65,12 +79,12 @@
 
   {block name='product_images'}
       {if $product.images|count > 1}
-      <div class="product-thumbs js-qv-product-images" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
+      <div class="product-thumbs js-qv-product-images hidden-sm-down" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
           <div class="product-thumb slick-active">
               <div class="rc">
                   <img
                       class="thumb js-thumb lazyload img-fluid"
-                      data-src="{$product.cover.bySize.home_default.url}"
+                      data-src="{$product.cover.bySize.small_default.url}"
                       alt="{$product.cover.legend}" title="{$product.cover.legend}"
                       itemprop="image"
               >
@@ -82,7 +96,7 @@
               <div class="rc">
               <img
               class="thumb js-thumb lazyload img-fluid"
-              data-src="{$image.bySize.home_default.url}"
+              data-src="{$image.bySize.small_default.url}"
               alt="{$image.legend}"
               title="{$image.legend}"
               itemprop="image"
