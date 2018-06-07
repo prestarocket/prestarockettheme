@@ -26,7 +26,7 @@
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
 
-  <div id="carousel" class="carousel" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
+  <div id="carousel" class="carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
 
       <a href="{$slide.url}" class="d-block position-relative">

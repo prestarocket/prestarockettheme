@@ -112,8 +112,17 @@
 .btn-zoom{
 
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: $spacer;
+  bottom: $spacer;
   cursor: pointer;
+  display: none;
+  padding: 0;
+  line-height: 1;
+  & .material-icons{
+  font-size: 3*$font-size-base;
+  }
+}
+.images-container:hover .btn-zoom{
+  display: block;
 }
 

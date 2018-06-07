@@ -28,7 +28,7 @@ $product-thumb-height:          100px;
 $product-to-show:               3;//if you edit this, you have to add centerPadding ppy in data-slick with same value
 $product-thumb-wrap-width:      $product-to-show * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
 $product-thumb-wrap-width-2:    2 * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
-$product-thumb-wrap-height:     ($product-thumb-height + (2*$product-thumb-margin*$product-to-show));
+$product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 2;
 
 
 

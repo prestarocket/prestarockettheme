@@ -25,7 +25,7 @@
 <div class="images-container">
   {block name='product_cover'}
       <div class="position-relative">
-  <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1}{/literal}' data-count="{$product.images|count}">
+  <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
        <div class="rc">
     <img class="img-fluid lazyload"
@@ -79,7 +79,7 @@
 
   {block name='product_images'}
       {if $product.images|count > 1}
-      <div class="product-thumbs js-qv-product-images hidden-sm-down" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
+      <div class="product-thumbs js-qv-product-images hidden-sm-down slick__arrow-outside" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
           <div class="product-thumb slick-active">
               <div class="rc">
                   <img

@@ -10,10 +10,11 @@ export default class SlickSlider {
             }
 
             self.slick({
-                    lazyLoad: 'ondemand'
+                prevArrow:"<button type=\"button\" class=\"btn btn-link slick-prev slick-arrow\"><i class=\"material-icons left\">&#xE314;</i></button>",
+                nextArrow:"<button type=\"button\" class=\"btn btn-link slick-next slick-arrow\"><i class=\"material-icons right\">&#xE315;</i></button>"
+
                 });
         });
     }
-
 
 }
