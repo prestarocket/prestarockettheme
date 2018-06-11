@@ -15,20 +15,25 @@ function smarty_function_splitprice($params, &$smarty)
     if($smarty->tpl_vars['currency']->value['iso_code'] !== "EUR"){
         return $price;
     }
-
+    $unity = '';
+    if(isset($params['unity'])){
+        $unity = $params['unity'];
+    }
     $currencySign = $smarty->tpl_vars['currency']->value['sign'];
 
 
-    $priceSplit = priceToFloat($price,$currencySign);
+    $priceSplit = priceToFloat($price,$currencySign,$unity);
 
 
     return $priceSplit;
 }
 
-function priceToFloat($price,$currencySign)
+function priceToFloat($price,$currencySign,$unity)
 {
     $delimiter = ',';
     $price = str_replace($currencySign, '', $price);
+    $price = str_replace($unity, '', $price);
+    $price = str_replace('.', $delimiter, $price);
     $price = explode($delimiter,$price);
     $priceUnit = $price[0];
     $priceDecimal = '';
