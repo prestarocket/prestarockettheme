@@ -36,7 +36,7 @@
     <div class="row">
       <div class="col-md-6">
         {block name='page_content_container'}
-          <section class="page-content" id="content">
+          <section class="page-content--product" id="content">
             {block name='page_content'}
               {block name='product_flags'}
                 <ul class="product-flags">

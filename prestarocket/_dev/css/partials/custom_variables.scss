@@ -35,9 +35,12 @@ $product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 
 
 //prices
 $regular-price-font-size:       $font-size-base * .875;
+$regular-price-font-weight:       700;
 $regular-price-color:           $gray-600;
 $price-color:                   $black;
-$product-price-color:           $tertiary;
+$product-price-discount-color:           $tertiary;
+$product-regular-price-font-size:       $font-size-base * 1.25;
+
 
 //product color box
 $colorbox-border-color:         #232323;

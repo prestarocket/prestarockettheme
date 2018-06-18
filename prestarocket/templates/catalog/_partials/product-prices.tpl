@@ -35,7 +35,7 @@
 
     {block name='product_price'}
       <div
-        class="product-price h5 {if $product.has_discount}has-discount{/if}"
+        class="product-price {if $product.has_discount}has-discount{/if}"
         itemprop="offers"
         itemscope
         itemtype="https://schema.org/Offer"
@@ -44,7 +44,7 @@
         <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
         <div class="current-price">
-          <span itemprop="price" content="{$product.price_amount}">{splitprice price=$product.price}</span>
+          <span class="current-price-display{if $product.has_discount} current-price-discount{/if}" itemprop="price" content="{$product.price_amount}">{splitprice price=$product.price}</span>
           {if $product.has_discount}
             {if $product.discount_type === 'percentage'}
               <span class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
