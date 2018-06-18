@@ -37,6 +37,9 @@ sup{
 }
 .page-footer{
   @extend .card-footer;
+  &:empty{
+    display: none;
+  }
 
 }
 

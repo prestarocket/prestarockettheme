@@ -45,11 +45,7 @@
     {/block}
 
     {block name='page_footer_container'}
-      <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">
-        {block name='page_footer'}
-          <!-- Footer content -->
-        {/block}
-      </footer>
+      <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">{block name='page_footer'}{/block}</footer>
     {/block}
 
   </section>
