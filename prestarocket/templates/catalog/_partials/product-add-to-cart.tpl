@@ -24,11 +24,11 @@
  *}
 <div class="product-add-to-cart">
   {if !$configuration.is_catalog}
-    <span class="control-label">{l s='Quantity' d='Shop.Theme.Catalog'}</span>
 
     {block name='product_quantity'}
-      <div class="product-quantity clearfix">
-        <div class="qty">
+      <div class="product-quantity row align-items-center no-gutters">
+        <label for="quantity_wanted" class="mb-0 col-auto mt-2">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+        <div class="qty mx-3 col-auto mt-2">
           <input
             type="text"
             name="qty"
@@ -40,9 +40,9 @@
           >
         </div>
 
-        <div class="add">
+        <div class="add col mt-2">
           <button
-            class="btn btn-primary add-to-cart"
+            class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart"
             data-button-action="add-to-cart"
             type="submit"
             {if !$product.add_to_cart_url}

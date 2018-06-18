@@ -158,3 +158,10 @@
   padding: .25*$spacer;
 }
 
+//product add to cart
+.btn-add-to-cart{
+  //@extend .d-flex;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
