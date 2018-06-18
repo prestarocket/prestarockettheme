@@ -1,28 +1,28 @@
 //color
 
-$bg-dark : #dededd;
-$tertiary:     #f39d72;
+$bg-dark :                      #dededd;
+$tertiary:                      #f39d72;
 
 
 //option
 $enable-fluid-layout:            false;
 
 // main layout
-$header-bg:     $white;
-$footer-bg:     $white;
-$wrapper-bg:    #f1f1f1;
+$header-bg:                     $white;
+$footer-bg:                     $white;
+$wrapper-bg:                    #f1f1f1;
 //product miniature
 
-$pm-title-color:      $gray-700;
-$pm-title-font-size:      $font-size-base;
-$pm-title-font-weight:      400;
+$pm-title-color:                $gray-700;
+$pm-title-font-size:            $font-size-base;
+$pm-title-font-weight:          400;
 
 //cart
-$promo-code-bg:       darken($body-bg,10%);
+$promo-code-bg:                 darken($body-bg,10%);
 
 //offcanvas
-$zindex-offcanvas :   $zindex-modal;
-$offcanvas-width :       300px;
+$zindex-offcanvas :             $zindex-modal;
+$offcanvas-width :              300px;
 
 //product slider
 $product-thumb-margin:          5px;
@@ -34,10 +34,13 @@ $product-thumb-wrap-width-2:    2 * ($product-thumb-width + 2 * $product-thumb-m
 $product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 2;
 
 //prices
-$regular-price-font-size:$font-size-base * .875;
-$regular-price-color:$gray-600;
-$price-color: $black;
-$product-price-color:$tertiary;
+$regular-price-font-size:       $font-size-base * .875;
+$regular-price-color:           $gray-600;
+$price-color:                   $black;
+$product-price-color:           $tertiary;
+
+//product color box
+$colorbox-border-color:         #232323;
 
 
 

@@ -63,6 +63,7 @@
   cursor: pointer;
   background-size: contain;
 }
+
 .product-title{
   color: $pm-title-color;
   font-size: $pm-title-font-size;
@@ -124,5 +125,18 @@
 }
 .images-container:hover .btn-zoom{
   display: block;
+}
+.label-color{
+  line-height: 1;
+  margin-right: $spacer/2;
+}
+.product-variants-item .color{
+  width:2rem;
+  height:2rem;
+  border: 2px solid transparent;
+}
+
+.input-color:checked+span, .input-color:hover+span, .input-radio:checked+span, .input-radio:hover+span {
+  border-color: $colorbox-border-color;
 }
 

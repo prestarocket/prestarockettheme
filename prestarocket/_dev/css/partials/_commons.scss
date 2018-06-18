@@ -268,8 +268,11 @@ display: inline-block;
   font-weight: 700;
   color:$black;
 }
-
+//forms
 custom-file-label.selected:after{
   content: "" !important;
 
+}
+.label{
+  @extend label;
 }
