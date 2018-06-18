@@ -70,5 +70,10 @@ $(document).ready(() => {
   form.init();
   productSelect.init();
   slickSlider.init();
+  //display input file content in custom file input BS
+  $('.custom-file-input').on('change',function(){
+      let fileName = $(this).val().split('\\').pop();
+      $(this).next('.custom-file-label').addClass("selected").html(fileName);
+  })
 
 });

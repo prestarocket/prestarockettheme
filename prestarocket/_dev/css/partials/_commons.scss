@@ -268,3 +268,8 @@ display: inline-block;
   font-weight: 700;
   color:$black;
 }
+
+custom-file-label.selected:after{
+  content: "" !important;
+
+}
