@@ -1,3 +1,9 @@
+.carousel a {
+  display: block;
+  &:not(:first-child) {
+    display: none;
+  }
+}
 .slider-caption{
   position: absolute;
   bottom:30px;
@@ -7,6 +13,10 @@
 
 .slick-slide:not(.slick-current) .img-carousel.lazyload {
   display: none!important;
+}
+.slick-slide figure{
+  position: absolute;
+  top: 0;
 }
 
 //.carousel {

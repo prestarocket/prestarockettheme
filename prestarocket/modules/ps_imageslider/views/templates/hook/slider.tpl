@@ -29,12 +29,9 @@
   <div id="carousel" class="carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
 
-      <a href="{$slide.url}" class="d-block position-relative">
+      <a href="{$slide.url}" class="position-relative rc" style="padding-top:{$paddingbottom}%">
               <figure>
-                  <div class="rc" style="padding-top:{$paddingbottom}%">
                   <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
-                  </div>
-
                   <noscript>
                       <img src="{$slide.image_url}">
                   </noscript>
