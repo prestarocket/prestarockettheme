@@ -22,48 +22,41 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="product-customization">
+<section class="product-customization mb-3">
   {if !$configuration.is_catalog}
     <div class="card card-block">
       <h3 class="h4 card-title">{l s='Product customization' d='Shop.Theme.Catalog'}</h3>
       {l s='Don\'t forget to save your customization to be able to add to cart' d='Shop.Forms.Help'}
-
       {block name='product_customization_form'}
         <form method="post" action="{$product.url}" enctype="multipart/form-data">
-          <ul class="clearfix">
             {foreach from=$customizations.fields item="field"}
-              <li class="product-customization-item">
-                <label> {$field.label}</label>
+          <div class="form-group mt-3">
+          <label for="field-{$field.id_customization_field}"> {$field.label}</label>
                 {if $field.type == 'text'}
-                  <textarea placeholder="{l s='Your message here' d='Shop.Forms.Help'}" class="product-message" maxlength="250" {if $field.required} required {/if} name="{$field.input_name}"></textarea>
-                  <small class="float-right">{l s='250 char. max' d='Shop.Forms.Help'}</small>
+                  <textarea placeholder="{l s='Your message here' d='Shop.Forms.Help'}" class="product-message form-control" maxlength="250" {if $field.required} required {/if} name="{$field.input_name}" id="field-{$field.id_customization_field}"></textarea>
+                  <small class="form-text text-muted">{l s='250 char. max' d='Shop.Forms.Help'}</small>
                   {if $field.text !== ''}
-                      <h6 class="customization-message">{l s='Your customization:' d='Shop.Theme.Catalog'}
+                      <strong class="customization-message">{l s='Your customization:' d='Shop.Theme.Catalog'}
                           <label>{$field.text}</label>
-                      </h6>
+                      </strong>
                   {/if}
                 {elseif $field.type == 'image'}
                   {if $field.is_customized}
-                    <br>
-                    <img src="{$field.image.small.url}">
-                    <a class="remove-image" href="{$field.remove_image_url}" rel="nofollow">{l s='Remove Image' d='Shop.Theme.Actions'}</a>
+                    <div class="my-2">
+                    <img src="{$field.image.small.url}" class="border">
+                    <a class="remove-image btn btn-sm btn-outline-danger" href="{$field.remove_image_url}" rel="nofollow">{l s='Remove Image' d='Shop.Theme.Actions'}</a>
+                    </div>
                   {/if}
-                  <span class="custom-file">
-                    <span class="js-file-name">{l s='No selected file' d='Shop.Forms.Help'}</span>
-                    <input class="file-input js-file-input" {if $field.required} required {/if} type="file" name="{$field.input_name}">
-                    <button class="btn btn-primary">{l s='Choose file' d='Shop.Theme.Actions'}</button>
-                  </span>
-                  <small class="float-right">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</small>
+                  <div class="custom-file">
+                    <input class="custom-file-input" {if $field.required} required {/if} type="file" name="{$field.input_name}" id="field-{$field.id_customization_field}">
+                    <label class="custom-file-label" for="field-{$field.id_customization_field}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+                  </div>
+                  <small class="form-text text-muted">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</small>
                 {/if}
-              </li>
             {/foreach}
-          </ul>
-          <div class="clearfix">
             <button class="btn btn-primary float-right" type="submit" name="submitCustomizedData">{l s='Save Customization' d='Shop.Theme.Actions'}</button>
-          </div>
         </form>
       {/block}
-
     </div>
   {/if}
 </section>
