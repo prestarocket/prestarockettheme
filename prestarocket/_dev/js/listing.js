@@ -49,8 +49,8 @@ $(document).ready(() => {
   var productConfig = (qv) => {
 
     qv.find('#quantity_wanted').TouchSpin({
-      buttondown_class: 'btn btn-outline-secondary js-touchspin',
-      buttonup_class: 'btn btn-outline-secondary js-touchspin',
+      buttondown_class: 'btn js-touchspin',
+      buttonup_class: 'btn js-touchspin',
       min: 1,
       max: 1000000
     });

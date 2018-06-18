@@ -79,14 +79,23 @@ h1,.h1{
 }
 
 //touch spin
+
 .bootstrap-touchspin
 {
+  box-shadow: $bs-touchspin-boxshadow;
+  border:$input-border-width solid $input-border-color;
   > input {
-  max-width: 60px;
+    max-width: 60px;
+    border:none;
+    box-shadow: none;
+    text-align: center;
+    font-weight: 700;
   }
   .btn {
     position: relative;
     z-index: 2;
+    color:$input-color;
+
   }
   .input-group-btn{
     display: flex;

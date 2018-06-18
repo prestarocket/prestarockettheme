@@ -17,8 +17,8 @@ function createSpin()
 {
   $.each($(spinnerSelector), function (index, spinner) {
      $(spinner).TouchSpin({
-         buttondown_class: 'btn btn-outline-secondary js-touchspin',
-         buttonup_class: 'btn btn-outline-secondary js-touchspin',
+         buttondown_class: 'btn js-touchspin',
+         buttonup_class: 'btn js-touchspin',
          min: parseInt($(spinner).attr('min'), 10),
          max: 1000000
     });
