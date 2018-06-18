@@ -167,13 +167,6 @@
                 <div class="custom-file">
                     <input name="{$field.name}" type="file" class="custom-file-input" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
                     <label class="custom-file-label" for="f-{$field.name}_{$uniqId}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
-                    {literal}
-                    <style>
-                        .custom-file-label::after{
-                            content:"{/literal}{l s='Choose file' d='Shop.Theme.Actions'}"{literal}
-                        }
-                    </style>
-                    {/literal}
                 </div>
             {else}
 
