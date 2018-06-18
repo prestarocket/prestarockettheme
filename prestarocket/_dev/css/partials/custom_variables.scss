@@ -1,6 +1,9 @@
 //color
 
 $bg-dark : #dededd;
+$tertiary:     #f39d72;
+
+
 //option
 $enable-fluid-layout:            false;
 
@@ -29,6 +32,12 @@ $product-to-show:               3;//if you edit this, you have to add centerPadd
 $product-thumb-wrap-width:      $product-to-show * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
 $product-thumb-wrap-width-2:    2 * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
 $product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 2;
+
+//prices
+$regular-price-font-size:$font-size-base * .875;
+$regular-price-color:$gray-600;
+$price-color: $black;
+$product-price-color:$tertiary;
 
 
 
