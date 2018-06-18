@@ -47,7 +47,7 @@
           <span itemprop="price" content="{$product.price_amount}">{splitprice price=$product.price}</span>
           {if $product.has_discount}
             {if $product.discount_type === 'percentage'}
-              <span class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => '']}{splitprice price=$product.discount_percentage_absolute}</span>
+              <span class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
             {else}
               <span class="discount discount-amount">
                   {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => '']}{splitprice price=$product.discount_to_display}
