@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="order-items" class="col-md-12">
+<div id="order-items">
 
   {block name='order_items_table_head'}
     <h3 class="card-title h3">{l s='Order items' d='Shop.Theme.Checkout'}</h3>

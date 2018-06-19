@@ -13,9 +13,9 @@
         <div>
           <div id="{$option.id}-container" class="payment-option clearfix">
             {* This is the way an option should be selected when Javascript is enabled *}
-            <span class="custom-radio float-left">
+              <div class="custom-control custom-radio">
               <input
-                class="ps-shown-by-js {if $option.binary} binary {/if}"
+                class="ps-shown-by-js custom-control-input{if $option.binary} binary{/if}"
                 id="{$option.id}"
                 data-module-name="{$option.module_name}"
                 name="payment-option"
@@ -23,8 +23,6 @@
                 required
                 {if $selected_payment_option == $option.id || $is_free} checked {/if}
               >
-              <span></span>
-            </span>
             {* This is the way an option should be selected when Javascript is disabled *}
             <form method="GET" class="ps-hidden-by-js">
               {if $option.id === $selected_payment_option}
@@ -35,23 +33,24 @@
                 </button>
               {/if}
             </form>
-
-            <label for="{$option.id}">
-              <span>{$option.call_to_action_text}</span>
-              {if $option.logo}
-                <img src="{$option.logo}">
-              {/if}
-            </label>
-
+              <label class="custom-control-label" for="{$option.id}">
+                  {$option.call_to_action_text}
+                  {if $option.logo}
+                    <img src="{$option.logo}">
+                  {/if}
+              </label>
+              </div>
           </div>
         </div>
 
         {if $option.additionalInformation}
           <div
             id="{$option.id}-additional-information"
-            class="js-additional-information definition-list additional-information{if $option.id != $selected_payment_option} ps-hidden {/if}"
+            class="mt-2 js-additional-information definition-list additional-information{if $option.id != $selected_payment_option} ps-hidden {/if}"
           >
+              <div class="alert alert-info">
             {$option.additionalInformation nofilter}
+              </div>
           </div>
         {/if}
 
@@ -77,7 +76,9 @@
   </div>
 
   {if $show_final_summary}
+      <hr class="">
       {include file='checkout/_partials/order-final-summary.tpl'}
+      <hr class="   ">
   {/if}
 
   {if $conditions_to_approve|count}

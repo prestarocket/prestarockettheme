@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section id="order-summary-content" class="page-content page-order-confirmation">
+<section id="order-summary-content" class="page-order-confirmation">
 
       <h4 class="h4 black text-center">{l s='Please check your order before payment' d='Shop.Theme.Checkout'}</h4>
 

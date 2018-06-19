@@ -1,5 +1,5 @@
 {extends file='page.tpl'}
-
+{block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
     <section id="content-hook_order_confirmation" class="card mb-3 text-white bg-success shadow">
       <div class="card-body">
