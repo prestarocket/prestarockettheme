@@ -68,8 +68,7 @@ $(document).ready(() => {
     prestashop.on('changedCheckoutStep', (params) => {
 
         if(typeof params.event.currentTarget !== 'undefined'){
-
-            $('.collapse',params.event.currentTarget).not('.show').collapse('show');
+            $('.collapse',params.event.currentTarget).not('.show').not('.collapse .collapse').collapse('show');
         }
     });
 
