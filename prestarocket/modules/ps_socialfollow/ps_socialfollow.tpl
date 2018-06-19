@@ -24,11 +24,9 @@
  *}
 
 {block name='block_social'}
-  <div class="block-social col-lg-4 col-md-12 col-sm-12">
-    <ul>
+  <div class="social-sharing col-lg-4 col-sm-12">
       {foreach from=$social_links item='social_link'}
-        <li class="{$social_link.class}"><a href="{$social_link.url}" target="_blank">{$social_link.label}</a></li>
+       <a class="text-hide mb-2 social-share-btn social-share-btn--footer {$social_link.class}" href="{$social_link.url}" target="_blank" rel="nofollow noopener">{$social_link.label}</a>
       {/foreach}
-    </ul>
   </div>
 {/block}
