@@ -1,11 +1,14 @@
 //
 // Color system
 //
+$white:    #fff;
 $primary:       #2fb5d2;
 $black:    #000;
+$gray-200: #e9ecef;
 $gray-300 : #f1f1f1;
-
-//$gray-900: #232323;
+//$gray-700: #495057;
+//
+//$body-bg:                   $white;
 
 
 // Options
@@ -53,6 +56,17 @@ $small-font-size:             $font-size-base * 0.875;
 
 $box-shadow:                  2px 2px 8px 0 rgba($black,.2);
 
+// Navs
+
+$nav-tabs-border-width:             2px;
+$nav-tabs-border-color:             $gray-300 !default;
+$nav-tabs-link-hover-border-color:  transparent transparent $nav-tabs-border-color;
+$nav-tabs-link-active-color:        $primary;
+$nav-tabs-link-active-border-color: transparent transparent $primary;
+
+//
+//$nav-divider-color:                 $gray-200 !default;
+//$nav-divider-margin-y:              ($spacer / 2) !default;
 
 //$gray-darker: #232323;
 //$gray: #7A7A7A;

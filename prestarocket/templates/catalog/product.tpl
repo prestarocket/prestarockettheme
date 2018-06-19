@@ -125,7 +125,7 @@
             {/block}
 
             {block name='product_tabs'}
-              <div class="tabs">
+              <div class="tabs product-tabs card card-block">
                 <ul class="nav nav-tabs" role="tablist">
                   {if $product.description}
                     <li class="nav-item">
@@ -170,7 +170,7 @@
                 </ul>
 
                 <div class="tab-content" id="tab-content">
-                 <div class="tab-pane fade in{if $product.description} active{/if}" id="description" role="tabpanel">
+                 <div class="tab-pane fade{if $product.description} show active{/if}" id="description" role="tabpanel">
                    {block name='product_description'}
                      <div class="product-description">{$product.description nofilter}</div>
                    {/block}
@@ -182,7 +182,7 @@
 
                  {block name='product_attachments'}
                    {if $product.attachments}
-                    <div class="tab-pane fade in" id="attachments" role="tabpanel">
+                    <div class="tab-pane fade" id="attachments" role="tabpanel">
                        <section class="product-attachments">
                          <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
                          {foreach from=$product.attachments item=attachment}
@@ -200,7 +200,7 @@
                  {/block}
 
                  {foreach from=$product.extraContent item=extra key=extraKey}
-                 <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
+                 <div class="tab-pane fade {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
                    {$extra.content nofilter}
                  </div>
                  {/foreach}

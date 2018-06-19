@@ -165,5 +165,15 @@
   font-weight: 600;
 }
 
+//product tabs
+.product-tabs{
+  .nav-tabs{
+    font-size: $font-size-base * .9;
+  }
+  //@extend .card;
+  //@extend .card-block
+  //@extend .shadow;
+}
+
 
 

@@ -285,3 +285,17 @@ custom-file-label.selected:after{
 .label{
   @extend label;
 }
+//nav tabs
+.nav-tabs  {
+  .nav-link{
+  color:$gray-600;
+  font-weight: 700;
+  }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-bottom-width: 3px;
+  }
+}
+.tab-content{
+  padding-top: $spacer;
+}
