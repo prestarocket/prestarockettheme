@@ -80,10 +80,14 @@
 
 .products-imagescover{
   @extend .shadow;
-  &:not(.slick-initialized) > .slick-slide:not(:first-child){
-    display: none;
-  }
 }
+.product-img:not(:first-child) .rc {
+  display: none;
+}
+.slick-initialized .product-img .rc{
+  display: block;
+}
+
 .product-thumbs{
   width:$product-thumb-wrap-width;
   height: $product-thumb-wrap-height;
