@@ -28,14 +28,14 @@
       class="address-item col-12 col-md-6 col-lg-4 mb-3{if $address.id == $selected} selected{/if}"
       id="{$name|classname}-address-{$address.id}"
     >
-      <label for="f-address-{$address.id}" class="card mb-0">
+      <label for="r-{$name|classname}-address-{$address.id}" class="card mb-0">
         <div class="card-header">
           <div class="custom-control custom-radio">
             <input
                     type="radio"
                     name="{$name}"
                     value="{$address.id}"
-                    id="f-address-{$address.id}"
+                    id="r-{$name|classname}-address-{$address.id}"
                     class="custom-control-input"
                     {if $address.id == $selected}checked{/if}
             >
