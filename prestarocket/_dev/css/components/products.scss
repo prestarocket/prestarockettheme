@@ -182,4 +182,9 @@
   @extend .shadow;
 }
 
+// modal add to cart
+.cart-content{
+  padding: $spacer;
+  background: theme-color('light');
+}
 
