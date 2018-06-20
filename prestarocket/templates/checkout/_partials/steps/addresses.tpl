@@ -107,7 +107,7 @@
             }
           </div>
         {else}
-          <div id="invoice-addresses" class="address-selector js-address-selector">
+          <div id="invoice-addresses" class="address-selector js-address-selector row">
             {include  file        = 'checkout/_partials/address-selector-block.tpl'
                       addresses   = $customer.addresses
                       name        = "id_address_invoice"
@@ -115,6 +115,15 @@
                       type        = "invoice"
                       interactive = !$show_delivery_address_form and !$show_invoice_address_form
             }
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <a href="{$new_address_invoice_url}" class="card bg-light h-100 text-center justify-content-center">
+                    <span class="card-body_add-address">
+                        <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}
+
+                    </span>
+                  </a>
+              </div>
           </div>
 
           {if isset($invoice_address_error)}
@@ -123,9 +132,6 @@
             <p class="alert alert-danger js-address-error" name="alert-invoice" style="display: none">{l s="Your address is incomplete, please update it." d="Shop.Notifications.Error"}</p>
           {/if}
 
-          <p class="add-address">
-            <a href="{$new_address_invoice_url}"><i class="material-icons">&#xE145;</i>{l s='add new address' d='Shop.Theme.Actions'}</a>
-          </p>
         {/if}
 
       {/if}
