@@ -61,7 +61,7 @@
   </div>
 
 
-      <h4 class="h4">
+      <h4 class="h4 mt-3">
       {l s='Shipping Method' d='Shop.Theme.Checkout'}
         <button class="step-edit text-muted btn btn-sm btn-link py-0" data-toggle="collapse" data-target="#content-checkout-delivery-step" aria-expanded="false" aria-controls="content-checkout-delivery-step">
           <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
