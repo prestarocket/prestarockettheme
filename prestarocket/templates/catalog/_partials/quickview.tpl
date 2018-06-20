@@ -23,9 +23,10 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="quickview-modal-{$product.id}-{$product.id_product_attribute}" class="modal fade quickview" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
    <div class="modal-content">
      <div class="modal-header">
+       <h1 class="modal-title">{$product.name}</h1>
        <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
          <span aria-hidden="true">&times;</span>
        </button>
@@ -36,13 +37,8 @@
           {block name='product_cover_thumbnails'}
             {include file='catalog/_partials/product-cover-thumbnails.tpl'}
           {/block}
-          <div class="arrows js-arrows">
-            <i class="material-icons arrow-up js-arrow-up">&#xE316;</i>
-            <i class="material-icons arrow-down js-arrow-down">&#xE313;</i>
-          </div>
         </div>
         <div class="col col-sm-6">
-          <h1 class="h1">{$product.name}</h1>
           {block name='product_prices'}
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}

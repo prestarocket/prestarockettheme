@@ -51,7 +51,7 @@
       <div class="product-img">
           <div class="rc">
           <img
-                    class="thumb js-thumb img-fluid lazyload"
+                    class="img-fluid lazyload"
                     data-sizes="auto"
                     data-srcset="{$image.bySize.medium_default.url} 452w,
                    {$image.bySize.pdt_180.url} 180w,

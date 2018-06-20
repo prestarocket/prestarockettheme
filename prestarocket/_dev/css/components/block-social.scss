@@ -6,6 +6,9 @@
   margin: $spacer 0;
   @extend .align-items-center;
 }
+.modal .social-sharing--product{
+  margin: 0;
+}
 
 .social-share-btn{
   width: $social-share-size;
