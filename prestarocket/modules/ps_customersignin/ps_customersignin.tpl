@@ -23,14 +23,14 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="_desktop_user_info" class="ml-4">
-  <div class="user-info">
+  <div class="user-info small">
     {if $logged}
       <a
-        class="logout d-none d-md-block"
+        class="logout d-none d-md-inline-block"
         href="{$logout_url}"
         rel="nofollow"
       >
-        <i class="material-icons">&#xE7FF;</i>
+        <i class="material-icons md-24">&#xE7FF;</i>
         {l s='Sign out' d='Shop.Theme.Actions'}
       </a>
       <a
@@ -40,7 +40,7 @@
         rel="nofollow"
       >
         <i class="material-icons d-md-none logged">&#xE7FF;</i>
-        <span class="d-none d-md-inline">{$customerName}</span>
+        <span class="d-none d-md-inline pl-2">{$customerName}</span>
       </a>
     {else}
       <a
