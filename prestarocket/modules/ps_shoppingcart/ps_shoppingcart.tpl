@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="_desktop_cart" class="ml-3">
-  <div class="blockcart cart-preview p-2 bg-primary {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
+  <div class="blockcart cart-preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
     <div class="header">
       {if $cart.products_count > 0}
         <a rel="nofollow" href="{$cart_url}" class="text-white">
