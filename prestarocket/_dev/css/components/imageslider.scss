@@ -7,8 +7,10 @@
 .slider-caption{
   position: absolute;
   bottom:30px;
+  left: 90px;
   margin-bottom: 0;
-
+  color: #fff;
+  max-width: 340px;
 }
 
 .slick-slide:not(.slick-current) .img-carousel.lazyload {
