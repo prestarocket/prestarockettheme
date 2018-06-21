@@ -25,7 +25,7 @@
 
 <div class="block-contact col-md-3">
   <div class="d-none d-md-block">
-    <h4 class="text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</h4>
+    <span class="title h3 block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</span>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
         <br>

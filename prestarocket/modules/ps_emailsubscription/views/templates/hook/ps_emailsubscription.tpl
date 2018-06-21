@@ -45,12 +45,12 @@
 
         <div class="clearfix">
             {if $msg}
-              <p class="alert mt-3 {if $nw_error}alert-danger{else}alert-success{/if}">
+              <p class="alert mt-2 {if $nw_error}alert-danger{else}alert-success{/if}">
                   {$msg}
               </p>
             {/if}
             {if $conditions}
-              <p>{$conditions}</p>
+              <p class="small mt-2">{$conditions}</p>
             {/if}
         </div>
       </form>

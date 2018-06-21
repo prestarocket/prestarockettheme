@@ -1,94 +1,18 @@
+.l-footer {
+  color: $text-muted;
 
-//
-//.footer-container {
-//  margin-top: $medium-space;
-//  padding-top: $medium-space;
-//  overflow: hidden;
-//  box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.3);
-//  li {
-//    margin-bottom: 0.3125rem;
-//  }
-//  li a {
-//    color: $gray;
-//    cursor: pointer;
-//    font-size: $font-size-sm;
-//    &:hover {
-//      color: $brand-primary;
-//    }
-//  }
-//}
-//.links {
-//  .collapse {
-//    display: inherit;
-//  }
-//}
-//
-//
-//@include media-breakpoint-down(sm) {
-//  .block_newsletter {
-//    padding-bottom: 0.625rem;
-//    border-bottom: 1px solid $gray-lighter;
-//  }
-//  .footer-container {
-//    box-shadow: none;
-//    margin-top: 0;
-//    .wrapper {
-//      padding-left: 0 !important;
-//      padding-right: 0 !important;
-//    }
-//    .links {
-//      .h3 {
-//        line-height: 1.5;
-//        font-size: 1rem;
-//      }
-//      ul {
-//        background-color: $gray-lighter;
-//        margin-bottom: 0;
-//        > li {
-//          padding: 0.625rem;
-//          border-bottom: 1px solid white;
-//          font-weight: bold;
-//          a {
-//            color: $gray-darker;
-//          }
-//        }
-//      }
-//    }
-//  }
-//  .links {
-//    .collapse {
-//      display: none;
-//      &.in {
-//        display: block;
-//      }
-//    }
-//    .title {
-//      padding: 0.625rem;
-//      border-bottom: 1px solid $gray-lighter;
-//      cursor: pointer;
-//      .collapse-icons .remove {
-//        display: none;
-//      }
-//    }
-//    .title[aria-expanded="true"] .collapse-icons {
-//      .add {
-//        display: none;
-//      }
-//      .remove {
-//        display: block;
-//      }
-//    }
-//    .navbar-toggler {
-//      display: inline-block;
-//      padding: 0;
-//    }
-//  }
-//}
-//@include media-breakpoint-down(md) {
-//  .block-social {
-//    text-align: center;
-//  }
-//  .block-contact {
-//    padding-left: 1.5rem;
-//  }
-//}
+  .title{
+    color:$black;
+    text-transform: uppercase;
+    display: block;
+    @extend .h3;
+  }
+  .cms-page-link,
+  .account-list a{
+    color: $text-muted;
+    &:hover{
+      color: theme-color('primary');
+
+    }
+  }
+}
