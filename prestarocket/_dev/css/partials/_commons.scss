@@ -301,3 +301,17 @@ custom-file-label.selected:after{
 .tab-content{
   padding-top: $spacer;
 }
+//products-section-title
+.products-section-title{
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-bottom: $spacer;
+  @extend .h1;
+  font-weight: 700;
+}
+
+//home content spacing
+.page-home > *{
+  margin-bottom: $spacer * .75;
+}
