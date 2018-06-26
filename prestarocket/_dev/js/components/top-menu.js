@@ -25,56 +25,19 @@
 import $ from 'jquery';
 
 export default class TopMenu {
-  init() {
-    let elmId;
+    constructor(el) {
+        this.el = el;
+    }
+    init() {
     let self = this;
-    this.el.find('li').hover((e) => {
-      if (this.el.parent().hasClass('mobile')) {
-        return;
-      }
-      if (elmId !== $(e.currentTarget).attr('id')) {
-        if ($(e.target).data('depth') === 0) {
-          $(`#${elmId} .js-sub-menu`).hide();
-        }
-        elmId = $(e.currentTarget).attr('id');
-      }
-      if (elmId && $(e.target).data('depth') === 0) {
-        $(`#${elmId} .js-sub-menu`).css({
-          top: $(`#${elmId}`).height() + $(`#${elmId}`).position().top
-        });
-      }
-    });
-    $('#menu-icon').on('click', function() {
-      $('#mobile_top_menu_wrapper').toggle();
-      self.toggleMobileMenu();
-    });
-    $('.js-top-menu .category').mouseleave(() => {
-      if (this.el.parent().hasClass('mobile')) {
-        return;
-      }
-    });
-    this.el.on('click', (e) => {
-      if (this.el.parent().hasClass('mobile')) {
-        return;
-      }
-      e.stopPropagation();
-    });
-    prestashop.on('responsive update', function(event) {
-      $('.js-sub-menu').removeAttr('style');
-      self.toggleMobileMenu();
-    });
-    super.init();
-  }
+      self.el.hoverIntent({
+          over: self.toggleClassSubMenu,
+          out: self.toggleClassSubMenu,
+          selector: ' > li'
+      });
+    }
 
-  toggleMobileMenu() {
-      if ($('#mobile_top_menu_wrapper').is(":visible")) {
-        $('#notifications').hide();
-        $('#wrapper').hide();
-        $('#footer').hide();
-      } else {
-        $('#notifications').show();
-        $('#wrapper').show();
-        $('#footer').show();
-      }
-  }
+    toggleClassSubMenu(){
+        $(this).toggleClass('menu-sub--active')
+    }
 }
