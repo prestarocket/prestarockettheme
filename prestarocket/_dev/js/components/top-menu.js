@@ -33,11 +33,19 @@ export default class TopMenu {
       self.el.hoverIntent({
           over: self.toggleClassSubMenu,
           out: self.toggleClassSubMenu,
-          selector: ' > li'
+          selector: ' > li',
+          timeout:100
       });
     }
 
     toggleClassSubMenu(){
-        $(this).toggleClass('menu-sub--active')
+        let _item = $(this);
+        let expanded = _item.attr('aria-expanded');
+        if(typeof expanded !=="undefined"){
+         expanded = (expanded.toLowerCase() === 'true');
+        _item.toggleClass('menu__item--active').attr('aria-expanded',!expanded);
+        $('.menu-sub',_item).attr('aria-expanded',!expanded).attr('aria-hidden',expanded);
+        }
+
     }
 }

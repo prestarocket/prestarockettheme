@@ -69,7 +69,6 @@ $(document).ready(() => {
   let productSelect  = new ProductSelect();
   let slickSlider = new SlickSlider();
   let topMenuEl = $('#_desktop_top_menu #top-menu');
-  console.log(topMenuEl);
   let topMenu = new TopMenu(topMenuEl);
 
   form.init();
