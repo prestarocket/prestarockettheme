@@ -38,7 +38,7 @@
       {/block}
 
       {if !empty($listing.rendered_facets)}
-          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="offcanvas">
+          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="modal">
             {l s='Filter' d='Shop.Theme.Actions'}
           </button>
       {/if}

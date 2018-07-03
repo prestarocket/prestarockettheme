@@ -46,7 +46,6 @@ import './product';
 import './cart';
 
 import Form from './components/form';
-import './components/offcanvas';
 import ProductSelect from './components/product-select';
 // import TopMenu from './components/top-menu';
 
