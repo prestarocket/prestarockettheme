@@ -28,7 +28,7 @@
       {if $product.has_discount}
         <div class="product-discount">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
-          <span class="regular-price">{splitprice price=$product.regular_price}</span>
+          <span class="regular-price">{$product.regular_price}</span>
         </div>
       {/if}
     {/block}
@@ -44,13 +44,13 @@
         <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
         <div class="current-price">
-          <span class="current-price-display{if $product.has_discount} current-price-discount{/if}" itemprop="price" content="{$product.price_amount}">{splitprice price=$product.price}</span>
+          <span class="current-price-display{if $product.has_discount} current-price-discount{/if}" itemprop="price" content="{$product.price_amount}">{$product.price}</span>
           {if $product.has_discount}
             {if $product.discount_type === 'percentage'}
               <span class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
             {else}
               <span class="discount discount-amount">
-                  {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => '']}{splitprice price=$product.discount_to_display}
+                  {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_to_display]}
               </span>
             {/if}
           {/if}
@@ -58,7 +58,7 @@
 
         {block name='product_unit_price'}
           {if $displayUnitPrice}
-            <p class="product-unit-price sub">({splitprice price=$product.unit_price_full unity=$product.unity}/{$product.unity})</p>
+              <p class="product-unit-price sub">{l s='(%unit_price%)' d='Shop.Theme.Catalog' sprintf=['%unit_price%' => $product.unit_price_full]}</p>
           {/if}
         {/block}
       </div>
@@ -66,19 +66,19 @@
 
     {block name='product_without_taxes'}
         {if $priceDisplay == 2}
-        <p class="product-without-taxes">{splitprice price=$product.price_tax_exc}{l s='%price% tax excl.' d='Shop.Theme.Catalog' sprintf=['%price%' => '']}</p>
+        <p class="product-without-taxes">{l s='%price% tax excl.' d='Shop.Theme.Catalog' sprintf=['%price%' => $product.price_tax_exc]}</p>
       {/if}
     {/block}
 
     {block name='product_pack_price'}
       {if $displayPackPrice}
-        <p class="product-pack-price"><span>{l s='Instead of %price%' d='Shop.Theme.Catalog' sprintf=['%price%' => '']}{splitprice price=$noPackPrice}</span></p>
+        <p class="product-pack-price"><span>{l s='Instead of %price%' d='Shop.Theme.Catalog' sprintf=['%price%' => $noPackPrice]}</span></p>
       {/if}
     {/block}
 
     {block name='product_ecotax'}
       {if $product.ecotax.amount > 0}
-        <p class="price-ecotax">{l s='Including ' d='Shop.Theme.Catalog'}{splitprice price=$product.ecotax.value}{l s='for ecotax' d='Shop.Theme.Catalog'}
+          <p class="price-ecotax">{l s='Including %amount% for ecotax' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.ecotax.value]}
           {if $product.has_discount}
             {l s='(not impacted by the discount)' d='Shop.Theme.Catalog'}
           {/if}
