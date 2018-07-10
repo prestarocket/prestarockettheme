@@ -37,6 +37,21 @@
       z-index: 2;
       opacity: 1;
     }
+    .menu-sub__list--1{
+      display: flex;
+    }
+    .menu__item--1{
+      padding-right: 10px;
+      padding-left: 10px;
+
+    }
+    .menu__item-link--1{
+      text-transform: uppercase;
+      color:$black;
+      .menu__item-link{
+        color: $body-color  ;
+      }
+    }
 
 }
 
