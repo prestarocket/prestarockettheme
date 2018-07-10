@@ -36,6 +36,7 @@ import 'bootstrap/js/src/tooltip';
 // import 'flexibility';
 import 'bootstrap-touchspin';
 import './lib/slick.min';
+import './lib/jquery.hoverIntent.min';
 import SlickSlider from './components/slick';
 
 import './responsive';
@@ -47,7 +48,7 @@ import './cart';
 
 import Form from './components/form';
 import ProductSelect from './components/product-select';
-// import TopMenu from './components/top-menu';
+import TopMenu from './components/top-menu';
 
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
@@ -66,10 +67,15 @@ $(document).ready(() => {
   const form = new Form();
   let productSelect  = new ProductSelect();
   let slickSlider = new SlickSlider();
+  let topMenuEl = $('#_desktop_top_menu #top-menu');
+  let topMenu = new TopMenu(topMenuEl);
+
   form.init();
   productSelect.init();
   slickSlider.init();
-  //display input file content in custom file input BS
+  topMenu.init();
+
+    //display input file content in custom file input BS
   $('.custom-file-input').on('change',function(){
       let fileName = $(this).val().split('\\').pop();
       $(this).next('.custom-file-label').addClass("selected").html(fileName);
