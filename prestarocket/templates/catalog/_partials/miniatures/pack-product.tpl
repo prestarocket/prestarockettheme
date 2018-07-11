@@ -43,7 +43,7 @@
           </a>
         </div>
         <div class="pack-product-price">
-          <strong>{splitprice price=$product.price}</strong>
+          <strong>{$product.price}</strong>
         </div>
         <div class="pack-product-quantity">
           <span>x {$product.pack_quantity}</span>

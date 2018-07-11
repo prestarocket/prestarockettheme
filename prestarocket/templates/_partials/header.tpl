@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="d-md-none d-flex justify-content-between align-items-center w-100 mobile no-gutters">
-        <button id="menu-icon" class="btn" data-toggle="offcanvas" data-target="#mobile_top_menu_wrapper">
+        <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
           <i class="material-icons d-inline">&#xE5D2;</i>
         </button>
         <div class="flex-grow-1 top-logo text-center" id="_mobile_logo"></div>

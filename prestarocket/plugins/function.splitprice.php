@@ -11,6 +11,7 @@
  */
 function smarty_function_splitprice($params, &$smarty)
 {
+    return $params['price'];
     $price = $params['price'];
     if($smarty->tpl_vars['currency']->value['iso_code'] !== "EUR"){
         return $price;
