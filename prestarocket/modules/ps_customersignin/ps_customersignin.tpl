@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="_desktop_user_info" class="ml-4">
-  <div class="user-info small">
+  <div class="user-info">
     {if $logged}
       <a
         class="logout d-none d-md-inline-block"
