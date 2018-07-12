@@ -25,8 +25,7 @@
 {block name='head_font'}
   <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
   <link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
-
-    {include file="_partials/font.tpl" stylesheets=$stylesheets}
+  {include file="_partials/font.tpl"}
 {/block}
 {block name='head_charset'}
   <meta charset="utf-8">
