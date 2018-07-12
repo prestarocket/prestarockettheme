@@ -69,10 +69,9 @@ h1,.h1{
   text-transform: uppercase;
 
 }
-.small .material-icons,
-.btn-sm .material-icons{
-  font-size: $small-font-size;
-
+.quick-view{
+  display: inline-block;
+  @extend .small;
 }
 .form-group.form-group_forgot-password{
   margin-top: -($form-group-margin-bottom/2);
