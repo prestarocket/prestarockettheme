@@ -184,11 +184,11 @@
                    {if $product.attachments}
                     <div class="tab-pane fade" id="attachments" role="tabpanel">
                        <section class="product-attachments">
-                         <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
+                         <p class="h4 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
                          {foreach from=$product.attachments item=attachment}
                            <div class="attachment">
-                             <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
-                             <p>{$attachment.description}</p
+                             <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+                             <p class="small">{$attachment.description}</p
                              <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
                                {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
                              </a>
@@ -214,7 +214,7 @@
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories clearfix">
-          <h3 class="h5 text-uppercase">{l s='You might also like' d='Shop.Theme.Catalog'}</h3>
+          <p class="products-section-title">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
           <div class="products">
             {foreach from=$accessories item="product_accessory"}
               {block name='product_miniature'}

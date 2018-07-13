@@ -23,9 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <section class="featured-products clearfix mt-3">
-  <span class="products-section-title">
+  <p class="products-section-title">
     {l s='Best Sellers' d='Shop.Theme.Catalog'}
-  </span>
+  </p>
   <div class="products">
     {foreach from=$products item="product"}
       {include file="catalog/_partials/miniatures/product.tpl" product=$product}

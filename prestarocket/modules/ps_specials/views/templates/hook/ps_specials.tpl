@@ -24,9 +24,9 @@
  *}
 
 <section class="featured-products clearfix mt-3">
-  <span class="h1 products-section-title text-uppercase">
+  <p class="products-section-title">
     {l s='On sale' d='Shop.Theme.Catalog'}
-  </span>
+  </p>
   <div class="products">
     {foreach from=$products item="product"}
       {include file="catalog/_partials/miniatures/product.tpl" product=$product}
