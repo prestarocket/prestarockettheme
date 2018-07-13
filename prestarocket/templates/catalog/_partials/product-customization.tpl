@@ -22,10 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="product-customization mb-3">
+<section class="product-customization mb-4">
   {if !$configuration.is_catalog}
     <div class="card card-block">
-      <h3 class="h4 card-title">{l s='Product customization' d='Shop.Theme.Catalog'}</h3>
+      <p class="h4 card-title">{l s='Product customization' d='Shop.Theme.Catalog'}</p>
       {l s='Don\'t forget to save your customization to be able to add to cart' d='Shop.Forms.Help'}
       {block name='product_customization_form'}
         <form method="post" action="{$product.url}" enctype="multipart/form-data">

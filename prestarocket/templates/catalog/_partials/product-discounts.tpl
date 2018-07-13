@@ -22,12 +22,12 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="product-discounts">
+<section class="product-discounts mb-4">
   {if $product.quantity_discounts}
-    <h3 class="h6 product-discounts-title">{l s='Volume discounts' d='Shop.Theme.Catalog'}</h3>
+    <p class="h4 product-discounts-title">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
     {block name='product_discount_table'}
-      <table class="table-product-discounts">
-        <thead>
+      <table class="table-product-discounts table table-bordered text-center">
+        <thead class="thead-light">
         <tr>
           <th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
           <th>{$configuration.quantity_discount.label}</th>
