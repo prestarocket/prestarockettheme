@@ -29,12 +29,11 @@ import SlickSlider from './components/slick';
 $(document).ready(function () {
   createProductSpin();
   createInputFile();
+  let slickSlider = new SlickSlider();
 
   prestashop.on('updatedProduct', function (event) {
       createInputFile();
 
-      let slickSlider = new SlickSlider();
-      slickSlider.init();
 
       if (event && event.product_minimal_quantity) {
       const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
@@ -46,6 +45,10 @@ $(document).ready(function () {
     }
     $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
     $('.js-product-images-modal').replaceWith(event.product_images_modal);
+    slickSlider.init();
+
+
+
   });
 
 
@@ -85,4 +88,8 @@ $(document).ready(function () {
     });
   }
 
+});
+
+$(document).on('shown.bs.modal','#product-modal', function (e) {
+    $('#js-slick-product').resize();
 });
