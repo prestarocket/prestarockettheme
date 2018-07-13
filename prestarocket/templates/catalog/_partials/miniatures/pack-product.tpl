@@ -23,21 +23,23 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='pack_miniature_item'}
-  <article>
+  <article class="mb-2">
     <div class="card">
       <div class="pack-product-container">
         <div class="thumb-mask">
           <div class="mask">
-            <a href="{$product.url}" title="{$product.name}">
+            <a href="{$product.url}" title="{$product.name}" class="rc ratio1_1 d-block">
               <img
-                src="{$product.cover.medium.url}"
+                data-src="{$product.cover.medium.url}"
                 alt="{$product.cover.legend}"
-                data-full-size-image-url="{$product.cover.large.url}"
+                class="lazyload pack-product__img"
+                width="55"
+                height="55"
               >
             </a>
           </div>
         </div>
-        <div class="pack-product-name">
+        <div class="pack-product-name flex-grow-1 mx-4">
           <a href="{$product.url}" title="{$product.name}">
             {$product.name}
           </a>

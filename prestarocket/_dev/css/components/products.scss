@@ -188,3 +188,38 @@
   background: theme-color('light');
 }
 
+//product pack
+.pack-product-container{
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
+  padding: 0 $spacer;
+  font-size: $font-size-sm;
+}
+.mask{
+  width: 55px;
+}
+.thumb-mask{
+  padding: $spacer 0;
+}
+.pack-product__img{
+  border: 1px solid $border-color;
+}
+.pack-product-name{
+  @extend .flex-grow-1;
+  @extend .mx-4;
+}
+.pack-product-quantity{
+  border-left:1px solid $border-color;
+}
+.pack-product-price{
+  padding-right: $spacer/2;
+
+}
+.pack-product-quantity{
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .align-self-stretch;
+  padding-left: $spacer;
+}
+
