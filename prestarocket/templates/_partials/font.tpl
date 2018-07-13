@@ -1,4 +1,6 @@
 {literal}
+<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
+<link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
 <script type="text/javascript">
     WebFontConfig = {
         google: { families: [ 'Material+Icons|Noto+Sans:400,700' ] }
