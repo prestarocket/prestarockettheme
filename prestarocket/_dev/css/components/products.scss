@@ -16,6 +16,9 @@
     @include make-col(3);
   }
 }
+.slick-slide .product-miniature{
+  max-width: 100%;
+}
 /* Product miniature*/
 .card-product{
   height:100%;
