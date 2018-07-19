@@ -26,7 +26,7 @@
   <div class="language-selector-wrapper">
     <span id="language-selector-label" class="d-inline-block d-md-none">{l s='Language:' d='Shop.Theme.Global'}</span>
     <div class="language-selector dropdown js-dropdown">
-      <button data-toggle="dropdown" class="d-none d-md-inline-block btn btn-sm dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
+      <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
           {$current_language.name_simple}
       </button>
       <div class="dropdown-menu" aria-labelledby="language-selector-label">
@@ -34,12 +34,6 @@
               <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item small{if $language.id_lang == $current_language.id_lang} active{/if}">{$language.name_simple}</a>
           {/foreach}
       </div>
-
-      <select class="link d-inline-block d-md-none" aria-labelledby="language-selector-label">
-          {foreach from=$languages item=language}
-            <option value="{url entity='language' id=$language.id_lang}"{if $language.id_lang == $current_language.id_lang} selected="selected"{/if}>{$language.name_simple}</option>
-          {/foreach}
-      </select>
     </div>
   </div>
 </div>
