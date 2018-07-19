@@ -1,13 +1,13 @@
 .products{
-  @include make-row();
+  @extend .row;
   align-items:stretch;
 
 }
 .product-miniature{
-  @include make-col(6);
+  @extend .col-6;
 
 }
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .product-miniature{
     @include make-col(4);
   }
