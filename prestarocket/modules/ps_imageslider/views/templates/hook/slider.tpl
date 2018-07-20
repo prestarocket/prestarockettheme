@@ -33,13 +33,13 @@
               <figure>
                   <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
                   <noscript>
-                      <img src="{$slide.image_url}">
+                      <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
                   </noscript>
                   {if $slide.title || $slide.description}
-                    <figcaption class="slider-caption">
+                    <div class="slider-caption">
                       <p class="display-1 text-uppercase">{$slide.title}</p>
                       <div class="caption-description">{$slide.description nofilter}</div>
-                    </figcaption>
+                    </div>
                   {/if}
               </figure>
             </a>
