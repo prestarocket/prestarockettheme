@@ -28,7 +28,9 @@
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
        <div class="rc">
-    <img class="img-fluid lazyload"
+           {if $product.cover}
+
+           <img class="img-fluid lazyload"
             data-sizes="auto"
          data-srcset="{$product.cover.bySize.medium_default.url} 452w,
            {$product.cover.bySize.pdt_180.url} 180w,
@@ -37,9 +39,15 @@
            {$product.cover.bySize.pdt_540.url} 540w"
          data-src="{$product.cover.bySize.medium_default.url}"
          alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+           {elseif isset($urls.no_picture_image)}
+           <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
+           {else}
+           <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+           {/if}
 
 
-   <noscript>
+
+           <noscript>
        <img class="img-fluid" data-src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" itemprop="image">
    </noscript>
        </div>
@@ -71,9 +79,11 @@
           {/if}
       {/foreach}
   </div>
+      {if $product.cover}
       <button type="button" class="btn btn-link btn-zoom hidden-sm-down product-layer-zoom" data-toggle="modal" data-target="#product-modal">
           <i class="material-icons zoom-in">&#xE8FF;</i>
       </button>
+      {/if}
   </div>
   {/block}
 

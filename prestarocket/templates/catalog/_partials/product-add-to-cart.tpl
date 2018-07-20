@@ -37,6 +37,7 @@
             class="input-group"
             min="{$product.minimal_quantity}"
             aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
+            {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
           >
         </div>
 

@@ -25,7 +25,7 @@
 
 <div class="block-contact col-md-3">
   <div class="d-none d-md-block">
-    <span class="title h3 block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</span>
+    <p class="title h3 block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</p>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
         <br>

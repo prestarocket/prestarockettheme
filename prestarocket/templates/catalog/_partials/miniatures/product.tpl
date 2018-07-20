@@ -29,12 +29,18 @@
             <div class="card-img-top position-relative">
                 {block name='product_thumbnail'}
                     <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1 d-block">
-                        <img
-                                data-src = "{$product.cover.bySize.home_default.url}"
-                                alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-                                data-full-size-image-url = "{$product.cover.large.url}"
-                                class="lazyload"
-                        >
+                        {if $product.cover}
+                            <img
+                                    data-src = "{$product.cover.bySize.home_default.url}"
+                                    alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
+                                    data-full-size-image-url = "{$product.cover.large.url}"
+                                    class="lazyload"
+                            >
+                        {elseif isset($urls.no_picture_image)}
+                                <img src = "{$urls.no_picture_image.bySize.home_default.url}">
+                        {else}
+                                <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+                        {/if}
                     </a>
                 {/block}
                 <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} d-none d-md-block">

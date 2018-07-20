@@ -60,7 +60,9 @@
                 {/block}
 
                 {block name='product_refresh'}
-                  <input class="product-refresh" data-url-update="false" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}" hidden>
+                    {if !isset($product.product_url)}
+                    <input class="product-refresh" data-url-update="false" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}" hidden>
+                    {/if}
                 {/block}
             </form>
           </div>

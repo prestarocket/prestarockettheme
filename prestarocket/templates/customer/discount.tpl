@@ -57,7 +57,7 @@
       </tbody>
     </table>
     <div class="cart-rules d-md-none">
-      {foreach from=$cart_rules item=slip}
+      {foreach from=$cart_rules item=cart_rule}
         <div class="cart-rule">
           <ul>
             <li>

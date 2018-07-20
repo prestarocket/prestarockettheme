@@ -24,7 +24,8 @@
  *}
 <div class="product-variants">
   {foreach from=$groups key=id_attribute_group item=group}
-    <div class="form-group product-variants-item">
+      {if !empty($group.attributes)}
+      <div class="form-group product-variants-item">
       {if $group.group_type == 'select'}
           <label for="group_{$id_attribute_group}">{$group.name}</label>
           <div>
@@ -62,5 +63,6 @@
           {/foreach}
       {/if}
     </div>
+    {/if}
   {/foreach}
 </div>

@@ -39,7 +39,7 @@
             <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}" class="img-fluid">
           </div>
           <div class="col-md-5 col-sm-7 col-12 col-lg-4 store-description">
-            <h3 class="h3 card-title">{$store.name}</h3>
+            <p class="h3 card-title">{$store.name}</p>
             <address>{$store.address.formatted nofilter}</address>
             {if $store.note || $store.phone || $store.fax || $store.email}
               <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Global'}</strong><i class="material-icons">&#xE409;</i></a>

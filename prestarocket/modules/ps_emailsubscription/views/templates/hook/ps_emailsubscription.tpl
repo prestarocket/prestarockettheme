@@ -33,7 +33,7 @@
           <input
                   name="email"
                   class="form-control{if isset($nw_error)} is-invalid{/if}"
-                  type="text"
+                  type="email"
                   value="{$value}"
                   placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
                   aria-labelledby="block-newsletter-label"
@@ -51,6 +51,9 @@
             {/if}
             {if $conditions}
               <p class="small mt-2">{$conditions}</p>
+            {/if}
+            {if isset($id_module)}
+                {hook h='displayGDPRConsent' id_module=$id_module}
             {/if}
         </div>
       </form>

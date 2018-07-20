@@ -40,8 +40,12 @@
         itemscope
         itemtype="https://schema.org/Offer"
       >
+      {if isset($product.seo_availability)}
+        <link itemprop="availability" href="{$product.seo_availability}"/>
+      {else}
         <link itemprop="availability" href="https://schema.org/InStock"/>
-        <meta itemprop="priceCurrency" content="{$currency.iso_code}">
+      {/if}
+      <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
         <div class="current-price">
           <span class="current-price-display{if $product.has_discount} current-price-discount{/if}" itemprop="price" content="{$product.price_amount}">{$product.price}</span>

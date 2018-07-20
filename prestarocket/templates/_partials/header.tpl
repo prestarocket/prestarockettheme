@@ -58,9 +58,17 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-2 d-none d-md-block" id="_desktop_logo">
-          <a href="{$urls.base_url}">
-            <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
-          </a>
+          {if $page.page_name == 'index'}
+            <h1>
+              <a href="{$urls.base_url}">
+                <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+              </a>
+            </h1>
+          {else}
+            <a href="{$urls.base_url}">
+              <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+            </a>
+          {/if}
         </div>
         <div class="col-md-10 col-sm-12 d-flex align-items-center justify-content-between position-static">
             {hook h='displayTop'}
