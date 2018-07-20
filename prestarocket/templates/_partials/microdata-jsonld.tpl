@@ -23,6 +23,13 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
+<meta property="og:title" content="{$page.meta.title}"/>
+<meta property="og:description" content="{$page.meta.description}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{$urls.current_url}"/>
+<meta property="og:site_name" content="{$shop.name}"/>
+<meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
+
 <script type="application/ld+json">
 {
     "@context" : "http://schema.org",

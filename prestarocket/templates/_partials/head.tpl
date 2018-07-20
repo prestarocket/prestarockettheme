@@ -48,7 +48,9 @@
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}{if isset($smarty.get.page) && $smarty.get.page > 1}?page={$smarty.get.page}{/if}">
   {/if}
-  {include file="_partials/pagination_seo.tpl" stylesheets=$stylesheets}
+  {include file="_partials/microdata-jsonld.tpl"}
+
+  {include file="_partials/pagination-seo.tpl"}
 
 {/block}
 
@@ -72,10 +74,5 @@
 {block name='hook_header'}
   {$HOOK_HEADER nofilter}
 {/block}
-
-{block name='microdata_head'}
-  {include file="_partials/microdata-json.tpl"}
-{/block}
-
 
 {block name='hook_extra'}{/block}
