@@ -98,7 +98,7 @@ config.plugins.push(
       booleans: true,
       if_return: true,
       join_vars: true,
-      drop_console: false
+      drop_console: true
     },
     output: {
       comments: false
